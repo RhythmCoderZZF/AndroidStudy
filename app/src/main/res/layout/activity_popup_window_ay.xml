@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="._ui._popupwindow.PopupWindowAy">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onLeftTopClick"
+        android:text="下方" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:onClick="onRightTopClick"
+        android:text="下方" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onLeftBottomClick"
+        android:text="上方" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_center"
+        android:layout_centerHorizontal="true"
+        android:text="showAtLocation()和showAsDropDown()的区别\n showAtLocation()相交于anchorView的rootView;\n showAsDropDown相较于anchorView" />
+
+    <Button
+        android:id="@+id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="onParentCenterClick"
+        android:text="指定位置" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:onClick="onParentCenterClick"
+        android:text="指定位置" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onParentCenterClick"
+        android:text="指定位置" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:onClick="onParentCenterClick"
+        android:text="指定位置" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onParentCenterClick"
+        android:text="指定位置" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左" />
+
+        <RadioButton
+            android:id="@+id/rb_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上" />
+
+        <RadioButton
+            android:id="@+id/rb_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右" />
+
+        <RadioButton
+            android:id="@+id/rb_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onRightBottomClick"
+        android:text="上方" />
+</RelativeLayout>

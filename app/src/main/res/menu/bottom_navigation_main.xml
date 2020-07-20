@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tab_main_pager"
+        android:enabled="true"
+        android:icon="@mipmap/icon_home_pager_not_selected"
+        android:title="1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_knowledge_hierarchy"
+        android:enabled="true"
+        android:icon="@mipmap/icon_knowledge_hierarchy_not_selected"
+        android:title="2"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_wx_article"
+        android:enabled="true"
+        android:icon="@drawable/ic_wx_article"
+        android:title="3"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_navigation"
+        android:enabled="true"
+        android:icon="@mipmap/icon_navigation_not_selected"
+        android:title="4"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_project"
+        android:enabled="true"
+        android:icon="@mipmap/icon_project_not_selected"
+        android:title="5"
+        app:showAsAction="ifRoom" />
+</menu>

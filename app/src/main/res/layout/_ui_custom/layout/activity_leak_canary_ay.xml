@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="._performance_optimization.LeakCanaryAy">
+
+    <include layout="@layout/include_toolbar" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?android:actionBarSize">
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_thread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thread"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_thread_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thread-1"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_handler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handler"
+                android:textColor="@color/light_deep_red"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_static_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Static Activity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_static_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Static View"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_static_inner_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Static Inner Class"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="start"
+            android:text="start" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="clear"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

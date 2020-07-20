@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context="._other._status_bar.StatusBarAy">
+
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow">
+
+        <FrameLayout
+            android:id="@+id/fl_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_green">
+
+            <FrameLayout
+                android:id="@+id/fl_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_black">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/pic" />
+
+                <include layout="@layout/include_toolbar" />
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_1"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRandomColor"
+            android:text="随机颜色" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onTransparentColor"
+            android:text="透明" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onTest"
+            android:text="cmd" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_button"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_check_boxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/statusBarContent" />
+
+            <View
+                style="@style/Line"
+                android:layout_marginVertical="@dimen/dp_10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下面都是SYSTEM_UI_FLAG的一些特性和用法" />
+
+            <CheckBox
+                android:id="@+id/cb_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="SYSTEM_UI_FLAG_FULLSCREEN\n控制状态栏消失和显示,消失显示时contentView会上顶下沉statusBar区域。会被系统一些交互清除该标记(如下拉状态栏，切到其他activity...)" />
+
+
+            <CheckBox
+                android:id="@+id/cb_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN\n控制状态栏高度的消失和显示。" />
+
+            <CheckBox
+                android:id="@+id/cb_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="SYSTEM_UI_FLAG_IMMERSIVE_STICKY\nstatusBar消失时，滑动顶部区域粘性弹出隐藏statusBar" />
+
+            <CheckBox
+                android:id="@+id/cb_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="SYSTEM_UI_FLAG_LAYOUT_STABLE\n固定statusBar的高度，statusBar消失显示时不让contentView上顶下沉" />
+
+            <CheckBox
+                android:id="@+id/cb_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="SYSTEM_UI_FLAG_LIGHT_STATUS_BAR\n设置statusBar浅色背景对应的深色文字" />
+
+            <View style="@style/Line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fitsSystemWindowContent" />
+            <View style="@style/Line" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下面都是fitsSystemWindow的一些特性(作用在顶部imageView外层的viewGroup)" />
+
+            <CheckBox
+                android:id="@+id/cb_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="rl" />
+
+            <CheckBox
+                android:id="@+id/cb_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="fl_1" />
+
+            <CheckBox
+                android:id="@+id/cb_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="fl_2" />
+
+            <CheckBox
+                android:id="@+id/cb_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top"
+                android:text="fl_3" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

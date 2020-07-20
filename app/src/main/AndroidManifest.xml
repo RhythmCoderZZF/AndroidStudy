@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android_study">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="._kotlin._coroutines._1_base._1_Ay"></activity>
+        <activity android:name="._kotlin._coroutines.CoroutinesAy" />
+        <activity android:name="._jetpack._aac_demo.ui.activity.AACDemoActivity" />
+        <activity android:name="._framework._network.NetWorkAy" />
+        <activity android:name="._android._webview.WebViewAy" />
+        <activity android:name="._jetpack._livedata.LiveDataAy" />
+        <activity android:name="._jetpack._lifecycle.LifecycleAy" />
+        <activity android:name="._jetpack._room.RoomAy" />
+        <activity android:name="._android._database._sqlLite.SQLiteAy" />
+        <activity android:name="._android._database._sp.SpAy" />
+        <activity android:name="._android._database._file.FileAy" />
+        <activity android:name="._android._database.MainDataBaseAy" />
+        <activity android:name="._other._zxing.ZXingDemoAy" />
+        <activity android:name="._framework._permission.PermissionAy" />
+        <activity android:name="._android._fragment.FragmentDemoAy" />
+        <activity android:name="._jetpack._viewmodel.ViewModelAy" />
+        <activity
+            android:name="._android._activity.DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name="._kotlin._study.KotlinAy" />
+        <activity android:name="._other._status_bar.StatusBarAy" />
+        <activity android:name="._performance_optimization.LeakCanaryAy" />
+        <activity android:name="._ui._materialdesign.MaterialAy" />
+        <activity android:name="._ui_custom.calendar.CalendarAy" />
+        <activity android:name="._ui._popupwindow.PopupWindowAy" />
+
+        <service android:name=".base.cmd.FloatViewService" />
+
+        <activity android:name="._view._recyclerview.item_touch_helper.ItemTouchHelRecyclerView" />
+        <activity android:name=".base.BaseActivity" />
+        <activity android:name="._view._recyclerview.nest_recycler.RecyclerViewActivity" />
+        <activity android:name="._android._activity.LifecycleActivity" />
+        <activity android:name="._android._activity.Lifecycle2Activity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
