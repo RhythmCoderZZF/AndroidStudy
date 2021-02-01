@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/icon_home_pager_not_selected"
+        android:title="1" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@mipmap/icon_project_not_selected"
+        android:title="2" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@mipmap/icon_knowledge_hierarchy_not_selected"
+        android:title="3" />
+</menu>

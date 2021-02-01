@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android_study.jetpack.demos.viewmodel.ScoreBoardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline10">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_clear_night"
+            android:text="@string/jetpack_score_board_plus_1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16"
+            android:onClick="@{()->viewModel.plusACount(1)}"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_fog"
+            android:onClick="@{()->viewModel.plusBCount(1)}"
+            android:text="@string/jetpack_score_board_plus_1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_clear_night"
+            android:text="@string/jetpack_score_board_plus_2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16"
+            android:onClick="@{()->viewModel.plusACount(2)}"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_fog"
+            android:onClick="@{()->viewModel.plusBCount(2)}"
+            android:text="@string/jetpack_score_board_plus_2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_clear_night"
+            android:text="@string/jetpack_score_board_plus_3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="@{()->viewModel.plusACount(3)}"
+            app:layout_constraintTop_toTopOf="@+id/guideline8"
+            app:layout_constraintVertical_bias="0.464" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_fog"
+            android:onClick="@{()->viewModel.plusBCount(3)}"
+            android:text="@string/jetpack_score_board_plus_3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="140dp"
+            android:layout_height="145dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp60"
+            android:text="@{String.valueOf(viewModel.countA.intValue())}"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="140dp"
+            android:layout_height="145dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp60"
+            android:text="@{String.valueOf(viewModel.countB.intValue())}"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_baseline_replay_24"
+            android:onClick="@{()->viewModel.undo()}"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_baseline_sync_24"
+            android:onClick="@{()->viewModel.reset()}"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

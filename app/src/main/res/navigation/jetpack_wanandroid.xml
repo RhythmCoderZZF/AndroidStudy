@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jetpack_wanandroid"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.android_study.jetpack.demo_wanandroid.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/knowledgeFragment"
+        android:name="com.example.android_study.jetpack.demo_wanandroid.ui.knowledge.KnowledgeFragment"
+        android:label="knowledge_fragment"
+        tools:layout="@layout/knowledge_fragment" />
+    <fragment
+        android:id="@+id/wxFragment"
+        android:name="com.example.android_study.jetpack.demo_wanandroid.ui.wx.WxFragment"
+        android:label="wx_fragment"
+        tools:layout="@layout/wx_fragment" />
+</navigation>

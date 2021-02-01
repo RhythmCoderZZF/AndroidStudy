@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sample_gallery2"
+    app:startDestination="@id/galleryListFragment">
+    <fragment
+        android:id="@+id/galleryListFragment"
+        android:name="com.example.android_study.samples.gallery.gallery2.GalleryList2Fragment"
+        android:label="galleryListFragment"
+        tools:layout="@layout/fragment_gallery_list" >
+        <action
+            android:id="@+id/action_galleryListFragment_to_galleryViewPagerFragment"
+            app:destination="@id/galleryViewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryViewPagerFragment"
+        android:name="com.example.android_study.samples.gallery.gallery2.GalleryViewPagerFragment"
+        android:label="galleryViewPagerFragment"
+        tools:layout="@layout/fragment_gallery_view_pager" />
+</navigation>
