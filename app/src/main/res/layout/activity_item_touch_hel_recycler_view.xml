@@ -5,6 +5,6 @@
     android:id="@+id/rv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._view._recyclerview.item_touch_helper.ItemTouchHelRecyclerView">
+    tools:context=".ui.recyclerView.gesture.UIRecyclerViewDragActivity">
 
 </androidx.recyclerview.widget.RecyclerView>

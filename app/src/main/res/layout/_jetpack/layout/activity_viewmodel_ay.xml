@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="._jetpack._viewmodel.ViewModelAy">
+    tools:context=".jetpack.viewmodel.viewmodel.ViewModelAy">
 
     <include layout="@layout/include_toolbar" />
 
@@ -28,5 +28,12 @@
             android:layout_height="wrap_content"
             android:onClick="ViewModelFactory"
             android:text="ViewModelFactory" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ViewModelFactory2"
+            android:text="by viewModels" />
     </LinearLayout>
 </LinearLayout>

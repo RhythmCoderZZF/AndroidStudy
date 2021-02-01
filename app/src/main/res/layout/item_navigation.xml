@@ -11,10 +11,10 @@
         android:id="@+id/item_navigation_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         tools:text="知识体系"
-        android:textSize="@dimen/sp_14"
+        android:textSize="14sp"
         android:textColor="@color/comment_text"/>
 
     <com.zhy.view.flowlayout.TagFlowLayout

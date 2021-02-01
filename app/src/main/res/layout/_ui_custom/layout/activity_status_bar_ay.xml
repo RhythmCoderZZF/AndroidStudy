@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    tools:context="._other._status_bar.StatusBarAy">
+    tools:context=".other.status_bar.common.StatusBarAy">
 
     <FrameLayout
         android:id="@+id/fl_1"
@@ -64,6 +64,12 @@
             android:text="cmd" />
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_button"
+        android:background="@color/grey_bg"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,7 +91,7 @@
 
             <View
                 style="@style/Line"
-                android:layout_marginVertical="@dimen/dp_10" />
+                android:layout_marginVertical="10dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -96,7 +102,7 @@
                 android:id="@+id/cb_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
                 android:text="SYSTEM_UI_FLAG_FULLSCREEN\n控制状态栏消失和显示,消失显示时contentView会上顶下沉statusBar区域。会被系统一些交互清除该标记(如下拉状态栏，切到其他activity...)" />
 
@@ -105,7 +111,7 @@
                 android:id="@+id/cb_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
                 android:text="SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN\n控制状态栏高度的消失和显示。" />
 
@@ -113,7 +119,7 @@
                 android:id="@+id/cb_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
                 android:text="SYSTEM_UI_FLAG_IMMERSIVE_STICKY\nstatusBar消失时，滑动顶部区域粘性弹出隐藏statusBar" />
 
@@ -121,7 +127,7 @@
                 android:id="@+id/cb_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
                 android:text="SYSTEM_UI_FLAG_LAYOUT_STABLE\n固定statusBar的高度，statusBar消失显示时不让contentView上顶下沉" />
 
@@ -129,7 +135,7 @@
                 android:id="@+id/cb_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
                 android:text="SYSTEM_UI_FLAG_LIGHT_STATUS_BAR\n设置statusBar浅色背景对应的深色文字" />
 
@@ -149,33 +155,33 @@
                 android:id="@+id/cb_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
-                android:text="rl" />
+                android:text="rl-grey" />
 
             <CheckBox
                 android:id="@+id/cb_7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
-                android:text="fl_1" />
+                android:text="fl_1-yellow" />
 
             <CheckBox
                 android:id="@+id/cb_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
-                android:text="fl_2" />
+                android:text="fl_2-green" />
 
             <CheckBox
                 android:id="@+id/cb_9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_10"
+                android:layout_margin="10dp"
                 android:gravity="top"
-                android:text="fl_3" />
+                android:text="fl_3-black" />
 
         </LinearLayout>
 

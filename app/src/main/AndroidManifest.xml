@@ -1,55 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android_study">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--
+  If you use android.hardware.camera without .any, it will not work if you have a device without a back camera, such as most Chromebooks.
+     The second line adds the permission to access that camera.
+    -->
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:name=".base.App"
-        android:allowBackup="true"
+        android:name="._base.App"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name="._kotlin._coroutines._1_base._1_Ay"></activity>
-        <activity android:name="._kotlin._coroutines.CoroutinesAy" />
-        <activity android:name="._jetpack._aac_demo.ui.activity.AACDemoActivity" />
-        <activity android:name="._framework._network.NetWorkAy" />
-        <activity android:name="._android._webview.WebViewAy" />
-        <activity android:name="._jetpack._livedata.LiveDataAy" />
-        <activity android:name="._jetpack._lifecycle.LifecycleAy" />
-        <activity android:name="._jetpack._room.RoomAy" />
-        <activity android:name="._android._database._sqlLite.SQLiteAy" />
-        <activity android:name="._android._database._sp.SpAy" />
-        <activity android:name="._android._database._file.FileAy" />
-        <activity android:name="._android._database.MainDataBaseAy" />
-        <activity android:name="._other._zxing.ZXingDemoAy" />
-        <activity android:name="._framework._permission.PermissionAy" />
-        <activity android:name="._android._fragment.FragmentDemoAy" />
-        <activity android:name="._jetpack._viewmodel.ViewModelAy" />
+        tools:replace="android:allowBackup"
+        tools:targetApi="n">
+        <activity android:name=".android.location.AndroidLocationManagerMainActivity"></activity>
+        <activity android:name=".android.data_and_file.example.AndroidDataAndFileExampleActivity" />
+        <activity android:name=".android.data_and_file.AndroidDataAndFileMainActivity" />
+        <activity android:name=".third.picture_selector.ThirdPictureSelectorMainActivity" />
+        <activity android:name=".other.bugly.OtherBuglyActivity" />
+        <activity android:name=".jetpack.camera.recordVideo.CameraXRecordVideoActivity" />
+        <activity android:name=".jetpack.camera.preview.CameraXPreviewActivity" />
+        <activity android:name=".jetpack.camera.CameraXMainActivity" />
+        <activity android:name=".jetpack.viewmodel.isInstance.ViewModelTestActivity" />
+        <activity android:name=".jetpack.viewmodel.JetpackViewModelMainActivity" />
+        <activity android:name=".android.mediaPlayer.douyin.jz_viewpager2.JzTikTokViewPager2Activity" />
+        <activity android:name=".android.mediaPlayer.douyin.jz_recyclerview.JzTikTokActivity" />
+        <activity android:name=".android.mediaPlayer.douyin.gsy_viewpager2.GsyViewPager2Activity" />
+        <activity android:name=".android.mediaPlayer.douyin.ex_recyclerView.MediaPlayerRecyclerViewActivity" />
+        <activity android:name=".android.mediaPlayer.douyin.ex_viewpager2.MediaPlayerViewPager2Activity" />
+        <activity android:name=".android.mediaPlayer.MediaPlayerMainActivity" />
+        <activity android:name=".kotlin.flow.flow_livedata.KotlinFlowAndLiveDataSecondActivity" />
+        <activity android:name=".kotlin.flow.flow_livedata.KotlinFlowAndLiveDataActivity" />
+        <activity android:name=".ui.viewSystem.choreographer.UIChoreographerActivity" />
+        <activity android:name=".ui.viewSystem.UIViewSystemActivity" />
+        <activity android:name=".kotlin.flow.switchThread.kotlinFlowSwitchThreadActivity" />
+        <activity android:name=".android.handler.useInThread.HandlerThreadActivity" />
+        <activity android:name=".other.status_bar.immerse.StatusBarImmerseActivity" />
+        <activity android:name=".other.status_bar.StatusBarMainActivity" />
+        <activity android:name=".android.handler.threadLocal.HandlerThreadLocalActivity" />
+        <activity android:name=".android.handler.HandlerMainActivity" />
+        <activity android:name=".android.drawable_and_graph.bitmap.AndroidBitmapActivity" />
+        <activity android:name=".android.drawable_and_graph.drawable.DrawableViewBitmapActivity" />
+        <activity android:name=".android.drawable_and_graph.drawable.UICustomViewMainActivity" />
+        <activity android:name=".ui.viewpager2.UIViewPager2MainActivity" />
+        <activity android:name=".ui_custom.samples.UICusSamplesActivity" />
+        <activity android:name=".dispatchEvent.interceptEvent.DispatchEventInterceptEventActivity" />
+        <activity android:name=".dispatchEvent.DispatchEventMainActivity" />
+        <activity android:name=".kotlin.flow.buffer.KotlinFlowBufferMainActivity" />
+        <activity android:name=".kotlin.flow.operator.KotlinFlowOperatorMainActivity" />
+
+        <service
+            android:name=".android.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".android.service.ServiceMainActivity" />
+        <activity android:name=".ui.recyclerView.diffutil.UIRecyclerViewDiffUtilActivity" />
+        <activity android:name=".ui_third.AAChartCore.AAChartCoreMainActivity" />
+        <activity android:name=".ui_third.BaseRecyclerViewHolder.UITBaseRecyclerViewHolderMainActivity" />
+        <activity android:name=".ui_third.WheelView.UITPickerViewMainActivity" />
+        <activity android:name=".other.shortcut.OtherShortMainActivity" />
+        <activity android:name=".kotlin.base._3_nullPointException.KotlinBaseNullPointMainActivity" />
+        <activity android:name=".jetpack.paging3._main.JetPackPagingMainActivity" />
+        <activity android:name=".ui_custom.samples.UiCusMainActivity" />
+        <activity android:name=".third.map._3dmap.ThirdMapChooseLocationActivity" />
+        <activity android:name=".third.map._3dmap.ThirdMapLocationActivity" />
+        <activity android:name=".kotlin.base._2_function.KotlinFunctionMainActivity" />
+        <activity android:name=".kotlin.base._1_array.KotlinArrayMainActivity" />
+        <activity android:name=".kotlin.base.KotlinBaseMainActivity" />
+        <activity android:name=".kotlin.flow.networkSample.KotlinFlowNetworkSampleActivity" />
+        <activity android:name=".kotlin.flow.KotlinFlowMainActivity" />
+        <activity android:name=".kotlin.flow.main.KotlinFlowBaseActivity" />
+        <activity android:name=".kotlin.collection.CollectionMainActivity" />
+        <activity android:name=".ui_third.BasePopup.UITBasePopupMainActivity" />
+        <activity android:name=".ui.recyclerView.UIRecyclerViewMainActivity" />
+        <activity android:name=".kotlin.collection.stream_sequence.KotlinCollectionStreamSequenceActivity" />
+        <activity android:name=".ui.materialDesign.appbarlayout.AppbarLayoutActivity" />
+        <activity android:name=".ui.materialDesign.coordinatorLayout.CoordinatorLayoutActivity" />
+        <activity android:name=".ui.materialDesign.MaterialDesignMainActivity" />
+        <activity android:name=".android.fragment.fragmentManager.FragmentManagerActivity" />
+        <activity android:name=".android.fragment.FragmentMainActivity" />
+        <activity android:name=".kotlin.coroutine_core.CoroutineCoreActivity" />
+        <activity android:name=".other.git.GitActivity" />
+        <activity android:name=".samples.gallery.GalleryMainActivity" />
+        <activity android:name=".ui.viewpager2.fragmentLifecycle.ViewPager2FragmentLifecycleActivity" />
+        <activity android:name=".other.utils.UtilsActivity" />
+        <activity android:name=".samples.gallery.gallery1.GalleryActivity" />
+        <activity android:name=".samples.gallery.gallery2.Gallery2Activity" />
+        <activity android:name=".jetpack.demo_wanandroid.WanandroidMainActivity" />
         <activity
-            android:name="._android._activity.DialogActivity"
+            android:name=".jetpack.navigation.bottom_navigation.BottomNavAy"
+            android:label="@string/title_activity_bottom_nav_ay" />
+        <activity android:name=".jetpack.navigation.NavigationTestActivity" />
+        <activity android:name=".kotlin.coroutine._1_BaseAy" />
+        <activity android:name=".kotlin.coroutine._5_DealWithException" />
+        <activity android:name=".kotlin.coroutine._4_AsyncAndAwaitAy" />
+        <activity android:name=".kotlin.coroutine._3_CancelJobAy" />
+        <activity android:name=".jetpack.paging3.positional_data_source.PositionalDSAy" />
+        <activity android:name=".jetpack.paging3.PagingAy" />
+        <activity
+            android:name=".third.rong_im.SubConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".third.rong_im.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".third.rong_im.ImActivity" />
+        <activity
+            android:name=".third.rong_im.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".third.map._3dmap.ThridMapShowActivity" />
+        <activity android:name=".third.map.AmapActivity" />
+        <activity android:name=".java.juc.join.JucJoinActivity" />
+        <activity android:name=".java.juc.interrupt.InterruptActivity" />
+        <activity android:name=".java.juc._production_consumption.JucProductionConsumptionActivity" />
+        <activity android:name=".java.juc.JavaJucActivity" />
+        <activity android:name=".jetpack.demos.navigation_viewmodel.NavigationViewModelAy" />
+        <activity android:name=".jetpack.demos.DemosAy" />
+        <activity android:name=".jetpack.navigation.base.NavigationAy" />
+        <activity android:name=".jetpack.demos.viewmodel.ScoreBoardAy" />
+        <activity android:name=".jetpack.databinding.DataBindingAy" />
+        <activity android:name=".kotlin.coroutine._2_TimeOutAy" />
+        <activity android:name=".kotlin.coroutine.CoroutinesAy" />
+        <activity android:name=".jetpack.demo_aac.ui.activity.AACDemoActivity" />
+        <activity android:name=".framework._network.NetWorkAy" />
+        <activity android:name=".android._webview.WebViewAy" />
+        <activity android:name=".jetpack.livedata.LiveDataAy" />
+        <activity android:name=".jetpack.lifecycle.LifecycleAy" />
+        <activity android:name=".jetpack.room.RoomAy" />
+        <activity android:name=".android._database._sqlLite.SQLiteAy" />
+        <activity android:name=".android._database._sp.SpAy" />
+        <activity android:name=".android._database._file.FileAy" />
+        <activity android:name=".android._database.MainDataBaseAy" />
+        <activity android:name=".other.zxing.ZXingDemoAy" />
+        <activity android:name=".framework._permission.PermissionAy" />
+        <activity android:name=".android.fragment._lifecycle.FragmentDemoAy" />
+        <activity android:name=".jetpack.viewmodel.viewmodel.ViewModelAy" />
+        <activity
+            android:name=".android._activity.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name="._kotlin._study.KotlinAy" />
-        <activity android:name="._other._status_bar.StatusBarAy" />
-        <activity android:name="._performance_optimization.LeakCanaryAy" />
-        <activity android:name="._ui._materialdesign.MaterialAy" />
-        <activity android:name="._ui_custom.calendar.CalendarAy" />
-        <activity android:name="._ui._popupwindow.PopupWindowAy" />
+        <activity android:name=".other.status_bar.common.StatusBarAy" />
+        <activity android:name=".performance_optimization.LeakCanaryAy" />
+        <activity android:name=".ui.materialDesign.sample.MaterialAy" />
+        <activity android:name=".ui_custom.calendar.CalendarAy" />
+        <activity android:name=".ui._popupwindow.PopupWindowAy" />
 
-        <service android:name=".base.cmd.FloatViewService" />
+        <service android:name="._base.cmd.FloatViewService" />
 
-        <activity android:name="._view._recyclerview.item_touch_helper.ItemTouchHelRecyclerView" />
-        <activity android:name=".base.BaseActivity" />
-        <activity android:name="._view._recyclerview.nest_recycler.RecyclerViewActivity" />
-        <activity android:name="._android._activity.LifecycleActivity" />
-        <activity android:name="._android._activity.Lifecycle2Activity" />
+        <activity android:name=".ui.recyclerView.gesture.UIRecyclerViewDragActivity" />
+        <activity android:name="._base.BaseActivity" />
+        <activity android:name=".view._recyclerview.nest_recycler.RecyclerViewActivity" />
+        <activity android:name=".android._activity.LifecycleActivity" />
+        <activity android:name=".android._activity.Lifecycle2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,6 +227,160 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".android.drawable_and_graph.AndroidDrawableGraphMainActivity" />
+        <activity android:name=".android.drawable_and_graph.transtionDrawable.AndroidTransitionDrawableActivity" />
+        <activity android:name=".android.drawable_and_graph.drawable.AndroidDrawableActivity" />
+        <activity android:name=".java.io.JavaIOActivity" />
+        <activity android:name=".java.io.file.JavaIOFileActivity" />
+        <activity android:name=".ui.recyclerView.section.UIRecyclerViewSectionActivity" />
+        <activity android:name=".android.wifi.WifiMainActivity" />
+        <activity android:name=".android.wifi.ConnectionManagerActivity" />
+        <activity android:name=".android.wifi.WifiNetworkSuggestionActivity" />
+        <activity android:name=".android.location.LocationMainActivity" />
+        <activity android:name=".ui.materialDesign.bug.CoordinatorLayoutBugActivity" />
+        <activity android:name=".ui_custom.study.UICusStudyActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f3786736581909d3d158c78304627499" /> <!-- 友盟push——————————————————————————以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 start -->
+        <service
+            android:name="com.taobao.accs.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.ELECTION" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.taobao.accs.data.MsgDistributeService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.taobao.accs.EventReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.taobao.accs.ServiceReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.taobao.accs.internal.AccsJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":channel" />
+        <service
+            android:name="com.taobao.accs.ChannelService$KernelService"
+            android:process=":channel" />
+        <service
+            android:name="org.android.agoo.accs.AgooService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.umeng.message.XiaomiIntentService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.taobao.agoo.AgooCommondReceiver"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="${applicationId}.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" />
+
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.enablecallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.disablecallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.sendmessage.action" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.umeng.message.UmengDownloadResourceService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <provider
+            android:name="com.umeng.message.provider.MessageProvider"
+            android:authorities="${applicationId}.umeng.message"
+            android:exported="false">
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider>
     </application>
 
 </manifest>

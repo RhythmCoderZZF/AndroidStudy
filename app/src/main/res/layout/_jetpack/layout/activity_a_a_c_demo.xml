@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._jetpack._aac_demo.ui.activity.AACDemoActivity">
+    tools:context=".jetpack.demo_aac.ui.activity.AACDemoActivity">
 
 
     <Button

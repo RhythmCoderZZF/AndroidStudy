@@ -9,12 +9,23 @@
     <string name="fitsSystemWindowContent">fitsSystemWindow:\n
         1. 与设置SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN flag一起才有效,\n
         2. fitsSystemWindow=true,当前view会加一个statusBar高度的paddingTop\n
-        3. viewTree都设置fitsSystemWindow=true,只有最外层有效
+        3. viewTree都设置fitsSystemWindow=true,只有最外层有效\n
         4. 注意material design的viewGroup会修改上面规则
     </string>
 
     <!--kotlin-->
     <string name="kotlin_classes_and_inheritance">1. 构造函数——(注意：在 JVM 上，如果主构造函数的所有的参数都有默认值，编译器会生成 一个额外的无参构造函数，它将使用默认值。这使得 Kotlin 更易于使用像 Jackson 或者 JPA 这样的通过无参构造函数创建类的实例的库。)\n</string>
     <string name="kotlin_classes_and_inheritance_1">2. 继承——如果派生类有一个主构造函数，其基类可以（并且必须） 用派生类主构造函数的参数就地初始化 </string>
-
+    <!--jetpack-->
+    <string name="jetpack_score_board_plus_1">+1</string>
+    <string name="jetpack_score_board_plus_2">+2</string>
+    <string name="jetpack_score_board_plus_3">+3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_bottom_nav_ay">MainActivity</string>
+    <string name="title_activity_bottom_navigation_ay">MainActivity</string>
 </resources>

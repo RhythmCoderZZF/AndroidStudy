@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._jetpack._room.RoomAy">
+    tools:context=".jetpack.room.RoomAy">
 
     <Button
         android:id="@+id/select2"

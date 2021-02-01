@@ -5,7 +5,7 @@
     android:id="@+id/rl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._android._activity.Lifecycle2Activity">
+    tools:context=".android._activity.Lifecycle2Activity">
 
     <include layout="@layout/include_toolbar" />
 

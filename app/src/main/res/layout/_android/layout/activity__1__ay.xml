@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="._kotlin._coroutines._1_base._1_Ay">
+    tools:context=".kotlin.coroutine._2_TimeOutAy">
 
     <include layout="@layout/include_toolbar" />
 

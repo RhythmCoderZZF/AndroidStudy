@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._ui_custom.calendar.CalendarAy">
+    tools:context=".ui_custom.calendar.CalendarAy">
 
-    <com.example.android_study._ui_custom.calendar.view.TripCalendarList
+    <com.example.android_study.ui_custom.calendar.view.TripCalendarList
         android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

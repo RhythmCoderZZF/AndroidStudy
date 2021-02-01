@@ -5,16 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._jetpack._livedata.LiveDataAy">
+    tools:context=".jetpack.livedata.LiveDataAy">
 
-  <include layout="@layout/include_toolbar" />
 
   <Button
       android:id="@+id/button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="17dp"
-      android:layout_marginTop="160dp"
+      android:layout_marginStart="20dp"
       android:onClick="button"
       android:text="点击"
       app:layout_constraintStart_toStartOf="parent"
@@ -24,30 +22,56 @@
       android:id="@+id/textView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="280dp"
-      android:layout_marginTop="176dp"
+      android:layout_marginEnd="100dp"
       android:text="TextView"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintBottom_toBottomOf="@+id/button"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/button" />
 
   <Button
       android:id="@+id/button3"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="21dp"
-      android:layout_marginTop="44dp"
+      android:layout_marginTop="50dp"
       android:onClick="button1"
       android:text="子线程点击"
-      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/button"
       app:layout_constraintTop_toBottomOf="@+id/button" />
 
   <TextView
       android:id="@+id/textView1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="175dp"
-      android:layout_marginTop="70dp"
+      android:layout_marginEnd="100dp"
       android:text="TextView"
-      app:layout_constraintStart_toEndOf="@+id/button3"
-      app:layout_constraintTop_toBottomOf="@+id/textView" />
+      app:layout_constraintBottom_toBottomOf="@+id/button3"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/button3" />
+
+  <View
+      android:id="@+id/divider11"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="8dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+  <Button
+      android:id="@+id/btnStickObserve"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Button"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+  <TextView
+      android:id="@+id/textView14"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="liveDadta的粘性观察特性"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/divider11" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
