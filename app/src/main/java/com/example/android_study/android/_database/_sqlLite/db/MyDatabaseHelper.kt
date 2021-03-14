@@ -10,7 +10,7 @@ import com.example.android_study._base.cmd.CmdUtil
  * Date: 2020/7/10
  * Description:
  */
-class MyDatabaseHelper(context: Context?, name: String?, version: Int) : SQLiteOpenHelper(context, name, null, version) {
+class MyDatabaseHelper(context: Context?, val name: String = "sql_db.db", val version: Int = 2) : SQLiteOpenHelper(context, name, null, version) {
     private val createUser = """
     create table Student(
         id integer primary key autoincrement,

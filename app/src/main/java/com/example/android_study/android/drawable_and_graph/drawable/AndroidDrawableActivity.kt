@@ -27,9 +27,10 @@ class MyView @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
     var i=0
     val drawable = MyDrawable()
-    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        super.onSizeChanged(w, h, oldw, oldh)
-        drawable.bounds = Rect(100, 100, screenWidth-100, screenHeight-100)//bounds是drawable的大小
+    init {
+        addOnLayoutChangeListener{_,_,_,_,_,_,_,_,_->
+            drawable.bounds = Rect(100, 100, screenWidth-100, screenHeight-100)//bounds是drawable的大小
+        }
     }
 
     override fun onDraw(canvas: Canvas?) {

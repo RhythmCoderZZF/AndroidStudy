@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.android_study.ui_custom.study._Paint.Xfermode.VXfermode
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:text="
+setXfermode(Xfermode) 混合模式。混合两个bitmap的像素，其中有16种混合模式。使用过程：1先绘制Dst；为Src指定Paint.setXfermode；3最后绘制Src
+" />
+</FrameLayout>

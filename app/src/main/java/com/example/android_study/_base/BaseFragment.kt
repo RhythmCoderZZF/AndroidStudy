@@ -14,7 +14,7 @@ import com.example.android_study._base.cmd.CmdUtil
  * Description:
  */
 open class BaseFragment : Fragment() {
-    open val TAG = javaClass.simpleName
+    open val TAG = "Fragment[${this.hashCode()}]"
     protected var showLifecycle = false //向cmd打印生命周期
 
 
@@ -89,5 +89,11 @@ open class BaseFragment : Fragment() {
         super.onDetach()
         if (showLifecycle)
             CmdUtil.i("$TAG：onDetach")
+    }
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (showLifecycle)
+            CmdUtil.i("$TAG：onHiddenChanged->$hidden")
     }
 }

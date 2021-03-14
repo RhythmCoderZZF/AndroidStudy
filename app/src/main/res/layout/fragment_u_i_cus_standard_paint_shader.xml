@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.android_study.ui_custom.study._Paint.VShader
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="
+setShader (Shader shader)  着色器：用于对图形的填充。Shader有3种模式（TileMode.CLAMP|REPEAT|MIRROR）填充剩余空间，其中填充y轴方向，再填充x方向；Shader与Canvas绘制多大的图形，在哪里绘制都无关，因为**Shader永远从控件原点开始绘制**。
+"/>
+</FrameLayout>

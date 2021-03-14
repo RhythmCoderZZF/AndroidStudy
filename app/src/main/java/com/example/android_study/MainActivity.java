@@ -11,7 +11,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android_study.R;
 import com.example.android_study._base.BaseActivity;
 import com.example.android_study._base.NavigationAdapter;
 import com.example.android_study._base.NavigationListData;
@@ -19,6 +18,7 @@ import com.example.android_study._base.util.ToolbarHelper;
 import com.example.android_study.android._activity.LifecycleActivity;
 import com.example.android_study.android._database.MainDataBaseAy;
 import com.example.android_study.android._webview.WebViewAy;
+import com.example.android_study.android.data_and_file.AndroidDataAndFileMainActivity;
 import com.example.android_study.android.drawable_and_graph.AndroidDrawableGraphMainActivity;
 import com.example.android_study.android.location.AndroidLocationManagerMainActivity;
 import com.example.android_study.android.wifi.WifiMainActivity;
@@ -52,6 +52,7 @@ import com.example.android_study.other.status_bar.common.StatusBarAy;
 import com.example.android_study.other.utils.UtilsActivity;
 import com.example.android_study.other.zxing.ZXingDemoAy;
 import com.example.android_study.performance_optimization.LeakCanaryAy;
+import com.example.android_study.performance_optimization.POMemoryMainActivity;
 import com.example.android_study.samples.gallery.GalleryMainActivity;
 import com.example.android_study.third.map.AmapActivity;
 import com.example.android_study.third.picture_selector.ThirdPictureSelectorMainActivity;
@@ -63,6 +64,7 @@ import com.example.android_study.ui.viewSystem.UIViewSystemActivity;
 import com.example.android_study.ui.viewpager2.UIViewPager2MainActivity;
 import com.example.android_study.ui_custom.calendar.CalendarAy;
 import com.example.android_study.ui_custom.samples.UICusSamplesActivity;
+import com.example.android_study.ui_custom.study.UICusStudyActivity;
 import com.example.android_study.ui_third.AAChartCore.AAChartCoreMainActivity;
 import com.example.android_study.ui_third.BasePopup.UITBasePopupMainActivity;
 import com.example.android_study.ui_third.BaseRecyclerViewHolder.UITBaseRecyclerViewHolderMainActivity;
@@ -120,6 +122,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("Service");
             entry.setPath(ServiceMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("应用数据与文件");
+            entry.setPath(AndroidDataAndFileMainActivity.class);
             entries.add(entry);
         }
         {
@@ -388,6 +396,36 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
     }
 
 
+
+    // 自定义View
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("自定义View");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("学习系列🚀🚀");
+            entry.setPath(UICusStudyActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("基础案例");
+            entry.setPath(UICusSamplesActivity.class);
+            entries.add(entry);
+        }
+
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("日历");
+            entry.setPath(CalendarAy.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+
     // 第三方UI
     {
         NavigationListData data = new NavigationListData();
@@ -421,28 +459,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // 自定义UI
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("自定义UI");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("基础案例");
-            entry.setPath(UICusSamplesActivity.class);
-            entries.add(entry);
-        }
-
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("日历");
-            entry.setPath(CalendarAy.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
     // 事件分发
     {
         NavigationListData data = new NavigationListData();
@@ -467,6 +483,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("内存泄漏");
             entry.setPath(LeakCanaryAy.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("内存");
+            entry.setPath(POMemoryMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);

@@ -44,7 +44,6 @@ class SQLiteAy : BaseActivity(), Runnable {
 
         db.beginTransaction()       //事务
         try {
-            if (age > 20) throw NullPointerException()
             val contentValuesOf = contentValuesOf("name" to "XXX", "age" to "$age", "score" to "$score")
             db.insert("Student", null, contentValuesOf)
             db.setTransactionSuccessful()

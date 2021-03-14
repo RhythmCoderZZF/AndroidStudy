@@ -11,7 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="正确的加载一个大图"
+        android:text="BitmapFactory正确的加载一个大图
+\n1. BitmapFactory.Option  inJustDecodeBounds=true只获取图片信息不加载到内存，获取宽高后利用inSampleSize采样率压缩，缩小图片
+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +27,13 @@
         app:layout_constraintStart_toStartOf="@+id/textView28"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原图"
+        app:layout_constraintStart_toStartOf="@+id/iv"
+        app:layout_constraintTop_toBottomOf="@+id/iv" />
+
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="100dp"
@@ -33,5 +42,12 @@
         app:layout_constraintEnd_toEndOf="@+id/iv"
         app:layout_constraintStart_toStartOf="@+id/iv"
         app:layout_constraintTop_toBottomOf="@+id/iv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="压缩后"
+        app:layout_constraintStart_toStartOf="@+id/iv1"
+        app:layout_constraintTop_toBottomOf="@+id/iv1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

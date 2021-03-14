@@ -41,13 +41,15 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup"
         tools:targetApi="n">
-        <activity android:name=".android.location.AndroidLocationManagerMainActivity"></activity>
-        <activity android:name=".android.data_and_file.example.AndroidDataAndFileExampleActivity" />
+        <activity android:name=".performance_optimization.POMemoryMainActivity"></activity>
+        <activity android:name=".android.location.AndroidLocationManagerMainActivity" />
+        <activity android:name=".android.data_and_file.internal_and_outspace.AndroidDataAndFileIOSpaceActivity" />
         <activity android:name=".android.data_and_file.AndroidDataAndFileMainActivity" />
         <activity android:name=".third.picture_selector.ThirdPictureSelectorMainActivity" />
         <activity android:name=".other.bugly.OtherBuglyActivity" />
@@ -238,7 +240,27 @@
         <activity android:name=".android.wifi.WifiNetworkSuggestionActivity" />
         <activity android:name=".android.location.LocationMainActivity" />
         <activity android:name=".ui.materialDesign.bug.CoordinatorLayoutBugActivity" />
-        <activity android:name=".ui_custom.study.UICusStudyActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
+        <activity android:name=".ui_custom.study.UICusStudyActivity" />
+        <activity android:name=".ui_custom.study._1_standard.UICusStandardActivity" />
+        <activity android:name=".ui_custom.study._2_measure_layout.UICusMeasureLayoutActivity" />
+        <activity android:name=".ui_custom.study._3_gesture._1_interface.UICusGestureInterfaceActivity" />
+        <activity android:name=".ui_custom.study._3_gesture.UICusGestureActivity" />
+        <activity android:name=".ui_custom.study._demo.UICusStandardDemoActivity" />
+        <activity android:name=".ui_custom.study._4_anim.UICusAnimActivity" />
+        <activity android:name=".ui_custom.study._4_anim.anim.UICusAnimMainActivity" />
+        <activity android:name=".ui_custom.study._4_anim.animator._UICusMainActivity" />
+        <activity android:name=".ui_custom.study._4_anim.viewGroup_anim._UIViewGroupAnimMainActivity" />
+        <activity android:name=".ui_custom.study._4_anim.path_measure._UIPathMeasureMainActivity" />
+        <activity android:name=".ui_custom.study._4_anim.svg._UISVGMainActivity" />
+        <activity android:name=".ui_custom.study._Paint._UICusStudyPaintActivity" />
+        <activity android:name=".ui_custom.study._Canvas._UICusStudyCanvasActivity" />
+        <activity android:name=".ui_custom.study._Drawable._UICusDrawableActivity" />
+        <activity android:name=".ui_custom.study._Bitmap._UICusBitmapActivity" />
+        <activity android:name=".ui_custom.study._SurfaceView._UICusSurfaceViewActivity" />
+        <activity android:name=".ui_custom.study._Packge_View._UICusPackageViewActivity" />
+        <activity android:name=".ui_custom.study._Matrix._UICusMatrixActivity" />
+        <activity android:name=".ui_custom.study._3_gesture.demo.my_view_pager.UICusGestureMyViewPagerActivity" />
+        <activity android:name=".ui.recyclerView.diffutil.UIRVDiffUtilMainActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
         <service android:name="com.amap.api.location.APSService" />
 
         <meta-data
@@ -381,6 +403,11 @@
             android:exported="false">
             <grant-uri-permission android:pathPattern=".*" />
         </provider>
+
+        <provider
+            android:name=".android.data_and_file._ContentProvider.MyContentProvider"
+            android:authorities="${applicationId}.mycontentporvider"
+            android:exported="true"/>
     </application>
 
 </manifest>

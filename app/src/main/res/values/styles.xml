@@ -20,4 +20,10 @@
         <item name="android:background">@android:color/black</item>
         <item name="android:alpha">0.25</item>
     </style>
+
+    <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
 </resources>

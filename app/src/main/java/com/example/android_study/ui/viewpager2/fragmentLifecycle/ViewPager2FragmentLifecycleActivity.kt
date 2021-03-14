@@ -25,7 +25,7 @@ class ViewPager2FragmentLifecycleActivity : AppCompatActivity(),Runnable {
 
                 override fun createFragment(position: Int) = ViewPagerContentFragment.newInstance("$position")
             }
-            offscreenPageLimit=1
+            offscreenPageLimit=2
         }
 
         TabLayoutMediator(tabLayout, viewPager) { tab: TabLayout.Tab, i: Int ->

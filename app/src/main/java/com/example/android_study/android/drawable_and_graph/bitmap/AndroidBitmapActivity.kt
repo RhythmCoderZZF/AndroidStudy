@@ -20,9 +20,9 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
     }
 
     override fun run() {
-        //直接加载大图
+        //1.直接加载大图
         val bytes = assets.open("bigPic.png").readBytes()
-        CmdUtil.v("资源bytes:${bytes.size/1024/1024} M")
+        CmdUtil.v("资源bytes:${bytes.size / 1024 / 1024} M")
         val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
         val size = bitmap.allocationByteCount / 1024 / 1024
         iv.setImageBitmap(bitmap)
@@ -30,10 +30,25 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
 
 
         val bitmap1 = decodeBitmapFromBitmap(bytes, iv1.width, iv1.height)
-        val size1 = bitmap1.allocationByteCount / 1024
-        CmdUtil.i("压缩后 宽:${bitmap1.width} 高:${bitmap1.height} size:$size1 KB")
+        val size1 = bitmap1.allocationByteCount / 1024 / 1024f
+        CmdUtil.i("压缩后 宽:${bitmap1.width} 高:${bitmap1.height} size:$size1 M")
         iv1.setImageBitmap(bitmap1)
     }
+
+    private fun decodeBitmapFromBitmap(bytes: ByteArray, reqWidth: Int, reqHeight: Int): Bitmap {
+        return BitmapFactory.Options().run {
+            inJustDecodeBounds = true//只计算宽高，不生成bitmap
+
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, this)//只计算宽高，不生成bitmap
+
+            inSampleSize = calculateInSampleSize(this, reqWidth, reqHeight)//根据bitmap宽高，iv的宽高计算缩放倍数
+
+            inJustDecodeBounds = false//生成bitmap
+
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, this)
+        }
+    }
+
 
     /**
      * 计算要缩放的inSampleSize大小：
@@ -52,18 +67,4 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
         return inSampleSize
     }
 
-    fun decodeBitmapFromBitmap(bytes: ByteArray, reqWidth: Int, reqHeight: Int): Bitmap {
-        return BitmapFactory.Options().run {
-            inJustDecodeBounds = true//只计算宽高，不生成bitmap
-
-            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, this)//只计算宽高，不生成bitmap
-
-            inSampleSize = calculateInSampleSize(this, reqWidth, reqHeight)//根据bitmap宽高，iv的宽高计算缩放倍数
-
-            inJustDecodeBounds = false//生成bitmap
-
-
-            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, this)
-        }
-    }
 }

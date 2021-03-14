@@ -5,6 +5,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.view.ViewGroup
+import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -12,13 +14,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.example.android_study.R
 import com.example.android_study._base.adapter.Entry
+import com.example.android_study._base.adapter.EntryF
 import com.example.android_study._base.adapter.RvAdapter
 import com.example.android_study._base.cmd.CmdUtil
 import com.example.android_study._base.util.LogUtil
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
@@ -144,14 +151,25 @@ abstract class BaseActivity : AppCompatActivity(), CoroutineScope by MainScope()
     protected fun setRecyclerView(rv: RecyclerView, list: List<Entry>) {
         rv.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         rv.adapter = RvAdapter(list)
-        //        rv.addItemDecoration(new DividerItemDecoration(this, RecyclerView.VERTICAL));
     }
 
-    protected fun switchFragment(fragment: Fragment?, containerId: Int) {
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(containerId, fragment!!)
-        fragmentTransaction.commit()
+    protected fun setViewPagerFragment(root:Window, list: List<EntryF>) {
+        val viewPager=root.findViewById<ViewPager2>(R.id.viewPager)
+        val tabLayout=root.findViewById<TabLayout>(R.id.tabLayout)
+        viewPager.apply {
+            adapter = object : FragmentStateAdapter(this@BaseActivity) {
+                override fun getItemCount() = list.size
+
+                override fun createFragment(position: Int) = list[position].clazz
+            }
+            offscreenPageLimit = 1
+        }
+
+        TabLayoutMediator(tabLayout, viewPager) { tab: TabLayout.Tab, i: Int ->
+            tab.text=list[i].title
+        }.attach()
     }
+
 
     fun showLoading(show: Boolean, text: String = "正在加载...") {
         loadingDialog = loadingDialog ?: QuickPopupBuilder.with(this)

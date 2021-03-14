@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. 自定义垂直排列linearlayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.android_study.ui_custom.study._2_measure_layout._2_TestView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/deep_red"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="1" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:text="2" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="3" />
+        </com.example.android_study.ui_custom.study._2_measure_layout._2_TestView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. 自定义FlowLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.android_study.ui_custom.study._2_measure_layout._2_MyFlowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#F3F3F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="真好看"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="哈哈哈"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="哇塞"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="带不错了吧"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="你说的是真的吗？"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="😍😍😍😍😍😍😍😍"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="啊"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="no no no no "
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="piu piu piu"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_bg_white_radius10"
+                android:backgroundTint="#B4E91E1E"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="hello world"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </com.example.android_study.ui_custom.study._2_measure_layout._2_MyFlowLayout>
+    </LinearLayout>
+</ScrollView>

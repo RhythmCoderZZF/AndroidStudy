@@ -20,8 +20,8 @@ import kotlinx.coroutines.delay
 
 class UIRecyclerViewDiffUtilActivity : BaseActivity() {
     private val oldList = mutableListOf("1","2","3","4","5","6","7","8")
-    private val newList = mutableListOf("1","2","3","4","5","6","7","8","9","10")
-//    private val newList = mutableListOf("1","3","2","9","6","7","8","10")
+//    private val newList = mutableListOf("1","2","3","4","5","6","7","8","9","10")
+    private val newList = mutableListOf("1","3","2","9","6","7","8","10")
     private val myDiffCallBack = object : DiffUtil.Callback() {
         override fun getOldListSize() = oldList.size
         override fun getNewListSize() = newList.size
