@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.android_study.ui_custom.study._Camera.RCameraView
+        android:id="@+id/imgX"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/imgY"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rotation="x" />
+
+    <com.example.android_study.ui_custom.study._Camera.RCameraView
+        android:id="@+id/imgY"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/imgX"
+        app:layout_constraintEnd_toStartOf="@+id/imgZ"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgX"
+        app:layout_constraintTop_toTopOf="@+id/imgX"
+        app:rotation="y" />
+
+    <com.example.android_study.ui_custom.study._Camera.RCameraView
+        android:id="@+id/imgZ"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/imgY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgY"
+        app:layout_constraintTop_toTopOf="@+id/imgY"
+        app:rotation="z" />
+
+
+    <com.example.android_study.ui_custom.study._Camera.RCameraView
+        android:id="@+id/imgX1"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:cameraMoveToCenter="true"
+        app:layout_constraintEnd_toStartOf="@+id/imgY1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgX"
+        app:rotation="x" />
+
+    <com.example.android_study.ui_custom.study._Camera.RCameraView
+        android:id="@+id/imgY1"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:cameraMoveToCenter="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imgX1"
+        app:layout_constraintEnd_toStartOf="@+id/imgZ1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgX1"
+        app:layout_constraintTop_toTopOf="@+id/imgX1"
+        app:rotation="y" />
+
+    <com.example.android_study.ui_custom.study._Camera.RCameraView
+        android:id="@+id/imgZ1"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:cameraMoveToCenter="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imgY1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgY1"
+        app:layout_constraintTop_toTopOf="@+id/imgY1"
+        app:rotation="z" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/img2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgX1" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/img1"
+        app:layout_constraintEnd_toStartOf="@+id/img3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/img1" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/img2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img2"
+        app:layout_constraintTop_toTopOf="@+id/img2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

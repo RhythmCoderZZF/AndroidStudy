@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="radius" format="dimension" />
     <declare-styleable name="EditTextWithClear">
         <attr name="clearDrawable" format="reference" />
     </declare-styleable>
@@ -7,7 +8,7 @@
         <attr name="bg_color" format="color" />
         <attr name="stroke_color" format="color" />
         <attr name="stroke_width" format="dimension" />
-        <attr name="radius" format="dimension" />
+        <attr name="radius" />
         <attr name="duration" format="integer" />
     </declare-styleable>
 
@@ -19,5 +20,21 @@
         <attr name="fillColor" format="color" />
         <attr name="r" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="RCameraView">
+        <attr name="rotation" format="enum|integer">
+            <enum name="x" value="0" />
+            <enum name="y" value="1" />
+            <enum name="z" value="2" />
+        </attr>
+        <attr name="cameraMoveToCenter" format="boolean" />
+    </declare-styleable>
 
+    <declare-styleable name="VRoundImageView">
+        <attr name="radius" />
+    </declare-styleable>
+
+
+    <declare-styleable name="EventMonitorView">
+        <attr name="tag" format="string" />
+    </declare-styleable>
 </resources>

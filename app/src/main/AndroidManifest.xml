@@ -260,7 +260,15 @@
         <activity android:name=".ui_custom.study._Packge_View._UICusPackageViewActivity" />
         <activity android:name=".ui_custom.study._Matrix._UICusMatrixActivity" />
         <activity android:name=".ui_custom.study._3_gesture.demo.my_view_pager.UICusGestureMyViewPagerActivity" />
-        <activity android:name=".ui.recyclerView.diffutil.UIRVDiffUtilMainActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
+        <activity android:name=".ui.recyclerView.diffutil.UIRVDiffUtilMainActivity" />
+        <activity android:name=".ui_custom.study._Camera._UICusCameraActivity" />
+        <activity android:name=".ui_custom.event.UICusEventActivity" />
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.BConsumeActivity" />
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.BNotConsumeActivity" />
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptDownActivity" />
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptDownConsumeActivity" />
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptMoveActivity" />
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptMoveConsumeActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
         <service android:name="com.amap.api.location.APSService" />
 
         <meta-data

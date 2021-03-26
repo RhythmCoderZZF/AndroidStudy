@@ -25,7 +25,7 @@ class UICusGestureMyViewPagerActivity : BaseActivity() {
         var index = 0
         pics.iterator().forEach { pic ->
             if (index == 0) {
-                val moveImage = MovePic(this).apply {
+                val moveImage = MyViewPager.MovePic(this).apply {
                     layoutParams = ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT)
                     scaleType = ImageView.ScaleType.CENTER
                     setBackgroundColor(Color.GRAY)
@@ -46,34 +46,7 @@ class UICusGestureMyViewPagerActivity : BaseActivity() {
 
     }
 
-    private class MovePic @JvmOverloads constructor(
-            context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-    ) : AppCompatImageView(context, attrs, defStyleAttr) {
-        var startX = 0f
-        var startY = 0f
-        override fun onTouchEvent(event: MotionEvent?): Boolean {
-            when (event?.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    CmdUtil.v("i:DOWN")
-                    startX = event.x
-                    startY = event.y
-                    return true
-                }
-                MotionEvent.ACTION_MOVE -> {
-                    CmdUtil.v("i:MOVE")
-                    scrollTo(-(event.x - startX).toInt(), -(event.y - startY).toInt())
-                }
-                MotionEvent.ACTION_UP -> {
-                    CmdUtil.v("i:UP")
-                }
-                MotionEvent.ACTION_CANCEL -> {
-                    CmdUtil.v("i:CANCEL")
-                }
-            }
-            return super.onTouchEvent(event)
-        }
 
-    }
 
 
 }

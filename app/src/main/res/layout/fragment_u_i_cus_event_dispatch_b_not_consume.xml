@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.android_study.ui_custom.event.dispatchTouchEvent.VEventMonitorView
+        android:id="@+id/A"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/gray"
+        app:tag="A">
+
+        <com.example.android_study.ui_custom.event.dispatchTouchEvent.VEventMonitorView
+            android:id="@+id/B"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/colorAccent"
+            app:tag="B" />
+
+    </com.example.android_study.ui_custom.event.dispatchTouchEvent.VEventMonitorView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

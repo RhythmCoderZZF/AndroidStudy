@@ -10,6 +10,7 @@ import com.example.android_study.ui_custom.study._2_measure_layout.UICusMeasureL
 import com.example.android_study.ui_custom.study._3_gesture.UICusGestureActivity
 import com.example.android_study.ui_custom.study._4_anim.UICusAnimActivity
 import com.example.android_study.ui_custom.study._Bitmap._UICusBitmapActivity
+import com.example.android_study.ui_custom.study._Camera._UICusCameraActivity
 import com.example.android_study.ui_custom.study._Canvas._UICusStudyCanvasActivity
 import com.example.android_study.ui_custom.study._Drawable._UICusDrawableActivity
 import com.example.android_study.ui_custom.study._Matrix._UICusMatrixActivity
@@ -35,7 +36,8 @@ class UICusStudyActivity : BaseActivity() {
                 Entry("9. SurfaceView", _UICusSurfaceViewActivity::class.java),
                 Entry("10. 封装控件", _UICusPackageViewActivity::class.java),
                 Entry("11. Matrix", _UICusMatrixActivity::class.java),
-                Entry("demo合集", UICusStandardDemoActivity::class.java),
+                Entry("12. Camera", _UICusCameraActivity::class.java,"3D Canvas"),
+                Entry("demo合集", UICusStandardDemoActivity::class.java)
         ))
     }
 }

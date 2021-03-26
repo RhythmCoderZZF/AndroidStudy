@@ -5,7 +5,10 @@ import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatImageView
 import com.example.android_study._base.cmd.CmdUtil
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 /**
  * Author:create by RhythmCoder
@@ -46,7 +49,7 @@ class MyViewPager @JvmOverloads constructor(
             MotionEvent.ACTION_DOWN -> {
                 CmdUtil.i("O I:DOWN")
                 startPressX = event.x
-                dontScroll=true
+                dontScroll = true
             }
             MotionEvent.ACTION_MOVE -> {
                 CmdUtil.i("O I:MOVE")
@@ -84,7 +87,6 @@ class MyViewPager @JvmOverloads constructor(
             }
             MotionEvent.ACTION_MOVE -> {
                 CmdUtil.v("O:MOVE")
-                return false
             }
         }
 
@@ -110,6 +112,7 @@ class MyViewPager @JvmOverloads constructor(
         }
         if (mCurrPosition > childCount - 1) {
             mCurrPosition = childCount - 1
+
         }
         if ((endX - startX) > width / 2 && mCurrPosition > 0) {
             scrollTo(--mCurrPosition * width, 0)
@@ -118,5 +121,34 @@ class MyViewPager @JvmOverloads constructor(
         } else {
             scrollTo(mCurrPosition * width, 0)
         }
+    }
+
+    class MovePic @JvmOverloads constructor(
+            context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    ) : AppCompatImageView(context, attrs, defStyleAttr) {
+        var startX = 0f
+        var startY = 0f
+        override fun onTouchEvent(event: MotionEvent?): Boolean {
+            when (event?.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    CmdUtil.v("i:DOWN")
+                    startX = event.x
+                    startY = event.y
+                    return true
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    CmdUtil.v("i:MOVE")
+                    scrollTo(-(event.x - startX).toInt(), -(event.y - startY).toInt())
+                }
+                MotionEvent.ACTION_UP -> {
+                    CmdUtil.v("i:UP")
+                }
+                MotionEvent.ACTION_CANCEL -> {
+                    CmdUtil.v("i:CANCEL")
+                }
+            }
+            return super.onTouchEvent(event)
+        }
+
     }
 }

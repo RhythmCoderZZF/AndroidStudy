@@ -63,6 +63,7 @@ import com.example.android_study.ui.recyclerView.UIRecyclerViewMainActivity;
 import com.example.android_study.ui.viewSystem.UIViewSystemActivity;
 import com.example.android_study.ui.viewpager2.UIViewPager2MainActivity;
 import com.example.android_study.ui_custom.calendar.CalendarAy;
+import com.example.android_study.ui_custom.event.UICusEventActivity;
 import com.example.android_study.ui_custom.samples.UICusSamplesActivity;
 import com.example.android_study.ui_custom.study.UICusStudyActivity;
 import com.example.android_study.ui_third.AAChartCore.AAChartCoreMainActivity;
@@ -406,6 +407,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("学习系列🚀🚀");
             entry.setPath(UICusStudyActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("事件分发🚀🚀");
+            entry.setPath(UICusEventActivity.class);
             entries.add(entry);
         }
         {
