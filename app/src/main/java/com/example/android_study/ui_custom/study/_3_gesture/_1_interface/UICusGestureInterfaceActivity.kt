@@ -12,6 +12,8 @@ import com.example.android_study._base.cmd.CmdUtil
 import kotlinx.android.synthetic.main.activity_rv.*
 import kotlinx.android.synthetic.main.activity_u_i_choreographer.*
 import kotlinx.android.synthetic.main.activity_u_i_cus_gesture_interface.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class UICusGestureInterfaceActivity : BaseActivity() {
     var showScrollParam = false
@@ -61,6 +63,7 @@ class UICusGestureInterfaceActivity : BaseActivity() {
             if (showScrollParam) {
                 CmdUtil.e("down:${e1.action}|move:${e2.action}|dX:${distanceX}|dY${distanceY}")
             }
+            v1.scrollBy(distanceX.toInt(), distanceY.toInt())
             return true
         }
 

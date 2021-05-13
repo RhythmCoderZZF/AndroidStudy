@@ -75,8 +75,6 @@
         <activity android:name=".android.handler.threadLocal.HandlerThreadLocalActivity" />
         <activity android:name=".android.handler.HandlerMainActivity" />
         <activity android:name=".android.drawable_and_graph.bitmap.AndroidBitmapActivity" />
-        <activity android:name=".android.drawable_and_graph.drawable.DrawableViewBitmapActivity" />
-        <activity android:name=".android.drawable_and_graph.drawable.UICustomViewMainActivity" />
         <activity android:name=".ui.viewpager2.UIViewPager2MainActivity" />
         <activity android:name=".ui_custom.samples.UICusSamplesActivity" />
         <activity android:name=".dispatchEvent.interceptEvent.DispatchEventInterceptEventActivity" />
@@ -94,10 +92,8 @@
         <activity android:name=".ui_third.AAChartCore.AAChartCoreMainActivity" />
         <activity android:name=".ui_third.BaseRecyclerViewHolder.UITBaseRecyclerViewHolderMainActivity" />
         <activity android:name=".ui_third.WheelView.UITPickerViewMainActivity" />
-        <activity android:name=".other.shortcut.OtherShortMainActivity" />
         <activity android:name=".kotlin.base._3_nullPointException.KotlinBaseNullPointMainActivity" />
         <activity android:name=".jetpack.paging3._main.JetPackPagingMainActivity" />
-        <activity android:name=".ui_custom.samples.UiCusMainActivity" />
         <activity android:name=".third.map._3dmap.ThirdMapChooseLocationActivity" />
         <activity android:name=".third.map._3dmap.ThirdMapLocationActivity" />
         <activity android:name=".kotlin.base._2_function.KotlinFunctionMainActivity" />
@@ -131,7 +127,6 @@
         <activity android:name=".kotlin.coroutine._5_DealWithException" />
         <activity android:name=".kotlin.coroutine._4_AsyncAndAwaitAy" />
         <activity android:name=".kotlin.coroutine._3_CancelJobAy" />
-        <activity android:name=".jetpack.paging3.positional_data_source.PositionalDSAy" />
         <activity android:name=".jetpack.paging3.PagingAy" />
         <activity
             android:name=".third.rong_im.SubConversationListActivity"
@@ -213,13 +208,12 @@
         <activity android:name=".performance_optimization.LeakCanaryAy" />
         <activity android:name=".ui.materialDesign.sample.MaterialAy" />
         <activity android:name=".ui_custom.calendar.CalendarAy" />
-        <activity android:name=".ui._popupwindow.PopupWindowAy" />
+        <activity android:name=".ui.popup_window.PopupWindowAy" />
 
         <service android:name="._base.cmd.FloatViewService" />
 
         <activity android:name=".ui.recyclerView.gesture.UIRecyclerViewDragActivity" />
         <activity android:name="._base.BaseActivity" />
-        <activity android:name=".view._recyclerview.nest_recycler.RecyclerViewActivity" />
         <activity android:name=".android._activity.LifecycleActivity" />
         <activity android:name=".android._activity.Lifecycle2Activity" />
         <activity android:name=".MainActivity">
@@ -246,12 +240,12 @@
         <activity android:name=".ui_custom.study._3_gesture._1_interface.UICusGestureInterfaceActivity" />
         <activity android:name=".ui_custom.study._3_gesture.UICusGestureActivity" />
         <activity android:name=".ui_custom.study._demo.UICusStandardDemoActivity" />
-        <activity android:name=".ui_custom.study._4_anim.UICusAnimActivity" />
-        <activity android:name=".ui_custom.study._4_anim.anim.UICusAnimMainActivity" />
-        <activity android:name=".ui_custom.study._4_anim.animator._UICusMainActivity" />
-        <activity android:name=".ui_custom.study._4_anim.viewGroup_anim._UIViewGroupAnimMainActivity" />
-        <activity android:name=".ui_custom.study._4_anim.path_measure._UIPathMeasureMainActivity" />
-        <activity android:name=".ui_custom.study._4_anim.svg._UISVGMainActivity" />
+        <activity android:name=".ui_custom.anim.UICusAnimActivity" />
+        <activity android:name=".ui_custom.anim.anim.UICusAnimMainActivity" />
+        <activity android:name=".ui_custom.anim.animator._UICusMainActivity" />
+        <activity android:name=".ui_custom.anim.viewGroup_anim._UIViewGroupAnimMainActivity" />
+        <activity android:name=".ui_custom.anim.path_measure._UIPathMeasureMainActivity" />
+        <activity android:name=".ui_custom.anim.svg._UISVGMainActivity" />
         <activity android:name=".ui_custom.study._Paint._UICusStudyPaintActivity" />
         <activity android:name=".ui_custom.study._Canvas._UICusStudyCanvasActivity" />
         <activity android:name=".ui_custom.study._Drawable._UICusDrawableActivity" />
@@ -268,7 +262,13 @@
         <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptDownActivity" />
         <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptDownConsumeActivity" />
         <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptMoveActivity" />
-        <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptMoveConsumeActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
+        <activity android:name=".ui_custom.event.dispatchTouchEvent.AInterceptMoveConsumeActivity" />
+        <activity android:name=".ui_custom.event.conflict.ConflictAActivity" />
+        <activity android:name=".ui_custom.event.conflict.ConflictBActivity" />
+        <activity android:name=".android.data_and_file._ContentProvider.AndroidContentProviderMainActivity" />
+        <activity android:name=".ui.recyclerView.itemDecoration.RVItemDecorationActivity" />
+        <activity android:name=".ui.recyclerView.layoutManager.RVLayoutManagerActivity" />
+        <activity android:name=".ui_custom.anim.transition.UITransitionMainActivity" /> <!-- 高德地图定位—————————————————————————————————————————————————————————————————————————————————————— -->
         <service android:name="com.amap.api.location.APSService" />
 
         <meta-data

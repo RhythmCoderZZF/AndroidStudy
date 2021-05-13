@@ -57,11 +57,12 @@ import com.example.android_study.samples.gallery.GalleryMainActivity;
 import com.example.android_study.third.map.AmapActivity;
 import com.example.android_study.third.picture_selector.ThirdPictureSelectorMainActivity;
 import com.example.android_study.third.rong_im.ImActivity;
-import com.example.android_study.ui._popupwindow.PopupWindowAy;
+import com.example.android_study.ui.popup_window.PopupWindowAy;
 import com.example.android_study.ui.materialDesign.MaterialDesignMainActivity;
 import com.example.android_study.ui.recyclerView.UIRecyclerViewMainActivity;
 import com.example.android_study.ui.viewSystem.UIViewSystemActivity;
 import com.example.android_study.ui.viewpager2.UIViewPager2MainActivity;
+import com.example.android_study.ui_custom.anim.UICusAnimActivity;
 import com.example.android_study.ui_custom.calendar.CalendarAy;
 import com.example.android_study.ui_custom.event.UICusEventActivity;
 import com.example.android_study.ui_custom.samples.UICusSamplesActivity;
@@ -70,7 +71,6 @@ import com.example.android_study.ui_third.AAChartCore.AAChartCoreMainActivity;
 import com.example.android_study.ui_third.BasePopup.UITBasePopupMainActivity;
 import com.example.android_study.ui_third.BaseRecyclerViewHolder.UITBaseRecyclerViewHolderMainActivity;
 import com.example.android_study.ui_third.WheelView.UITPickerViewMainActivity;
-import com.example.android_study.view._recyclerview.nest_recycler.RecyclerViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -160,7 +160,8 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             entry.setContent("播放器");
             entry.setPath(MediaPlayerMainActivity.class);
             entries.add(entry);
-        } {
+        }
+        {
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("WI-FI");
             entry.setPath(WifiMainActivity.class);
@@ -313,28 +314,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    //RecyclerView
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("RecyclerView");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Nest");
-            entry.setPath(RecyclerViewActivity.class);
-            entries.add(entry);
-        }
-        {
-
-            NavigationListData.Entry entry1 = new NavigationListData.Entry();
-            entry1.setContent("手势");
-            entry1.setPath(RecyclerViewActivity.class);
-            entries.add(entry1);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
     //Framework
     {
         NavigationListData data = new NavigationListData();
@@ -397,7 +376,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
     }
 
 
-
     // 自定义View
     {
         NavigationListData data = new NavigationListData();
@@ -407,6 +385,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("学习系列🚀🚀");
             entry.setPath(UICusStudyActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("过渡与动画");
+            entry.setPath(UICusAnimActivity.class);
             entries.add(entry);
         }
         {

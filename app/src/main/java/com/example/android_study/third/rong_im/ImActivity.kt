@@ -11,7 +11,7 @@ import android.widget.TextView
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.util.LogUtil
-import com.example.android_study.ui._popupwindow.util.PopupWindowUtil
+import com.example.android_study.ui.popup_window.util.PopupWindowUtil
 import io.rong.imkit.RongIM
 import io.rong.imlib.RongIMClient
 import io.rong.imlib.model.Conversation

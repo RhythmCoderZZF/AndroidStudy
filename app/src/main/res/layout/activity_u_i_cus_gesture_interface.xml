@@ -23,27 +23,39 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <View
+            <FrameLayout
                 android:id="@+id/v1"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorPrimary">
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/deep_red" />
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center"
+                    android:background="@color/light_green" />
+            </FrameLayout>
 
             <com.example.android_study.ui_custom.study._2_measure_layout._2_MyFlowLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <CheckBox
                     android:id="@+id/cbScroll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="显示隐藏scroll参数"/>
+                    android:text="显示隐藏scroll参数" />
 
                 <CheckBox
                     android:id="@+id/cbFling"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="显示隐藏fling参数"/>
+                    android:text="显示隐藏fling参数" />
             </com.example.android_study.ui_custom.study._2_measure_layout._2_MyFlowLayout>
 
         </LinearLayout>

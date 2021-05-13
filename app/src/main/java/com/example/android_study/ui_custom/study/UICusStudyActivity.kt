@@ -8,7 +8,7 @@ import com.example.android_study.ui_custom.study._1_standard.UICusStandardActivi
 import com.example.android_study.ui_custom.study._demo.UICusStandardDemoActivity
 import com.example.android_study.ui_custom.study._2_measure_layout.UICusMeasureLayoutActivity
 import com.example.android_study.ui_custom.study._3_gesture.UICusGestureActivity
-import com.example.android_study.ui_custom.study._4_anim.UICusAnimActivity
+import com.example.android_study.ui_custom.anim.UICusAnimActivity
 import com.example.android_study.ui_custom.study._Bitmap._UICusBitmapActivity
 import com.example.android_study.ui_custom.study._Camera._UICusCameraActivity
 import com.example.android_study.ui_custom.study._Canvas._UICusStudyCanvasActivity
@@ -31,12 +31,11 @@ class UICusStudyActivity : BaseActivity() {
                 Entry("4. Drawable", _UICusDrawableActivity::class.java),
                 Entry("5. Bitmap", _UICusBitmapActivity::class.java),
                 Entry("6. Measure|Layout", UICusMeasureLayoutActivity::class.java),
-                Entry("7. 动画", UICusAnimActivity::class.java, "补间动画、帧动画 | 属性动画"),
-                Entry("8. Gesture", UICusGestureActivity::class.java),
-                Entry("9. SurfaceView", _UICusSurfaceViewActivity::class.java),
-                Entry("10. 封装控件", _UICusPackageViewActivity::class.java),
-                Entry("11. Matrix", _UICusMatrixActivity::class.java),
-                Entry("12. Camera", _UICusCameraActivity::class.java,"3D Canvas"),
+                Entry("7. Gesture", UICusGestureActivity::class.java),
+                Entry("8. SurfaceView", _UICusSurfaceViewActivity::class.java),
+                Entry("9. 封装控件", _UICusPackageViewActivity::class.java),
+                Entry("10. Matrix", _UICusMatrixActivity::class.java),
+                Entry("11. Camera", _UICusCameraActivity::class.java,"3D Canvas"),
                 Entry("demo合集", UICusStandardDemoActivity::class.java)
         ))
     }

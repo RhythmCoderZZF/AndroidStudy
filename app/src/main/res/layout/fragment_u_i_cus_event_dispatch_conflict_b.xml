@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.android_study.ui_custom.event.conflict.Father
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:layout_marginHorizontal="100dp">
+
+        <com.example.android_study.ui_custom.event.conflict.Child
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/light_red"
+            android:layout_gravity="center"/>
+    </com.example.android_study.ui_custom.event.conflict.Father>
+</FrameLayout>
