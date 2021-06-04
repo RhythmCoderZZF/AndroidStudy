@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET文本" />
+
+    <Button
+        android:id="@+id/btn_get_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET图片" />
+
+    <ImageView
+        android:id="@+id/get_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST JSON格式的数据"/>
+
+    <Button
+        android:id="@+id/btn_post_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST图片(以流的形式)"/>
+    <Button
+        android:id="@+id/btn_post_image_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST图片(以文件的形式)"/>
+</LinearLayout>

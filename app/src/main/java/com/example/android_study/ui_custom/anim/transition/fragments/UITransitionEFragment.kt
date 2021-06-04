@@ -20,7 +20,6 @@ class UITransitionEFragment : BaseFragment() {
         return inflater.inflate(R.layout.fragment_u_i_anim_transition_e, container, false)
     }
 
-    @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val originSize=element.layoutParams.width
@@ -28,6 +27,7 @@ class UITransitionEFragment : BaseFragment() {
         val rootView = rootView
         /*2. 定义过渡*/
         val transition = ChangeBounds()
+
         btn.setOnClickListener {
             /*3. 调用该方法时，立即捕获当前元素属性值，在下一帧到来时提交一个过渡任务。
             下一帧到来的时候会获取到新的属性值，过渡任务会自动触发旧值到新值之间的过渡*/

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scP"
+        android:layout_width="match_parent"
+        android:layout_height="900px"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/btnNestScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="开启嵌套滑动"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a\nb\nc\nd\ne\nf"
+                android:textSize="50sp" />
+
+            <ScrollView
+                android:id="@+id/scC"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/gray">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="a\nb\nc\nd\ne\nf\ng\nh\nh\ni\nj\n"
+                    android:textSize="100sp" />
+            </ScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="g\nh\nh\ni\nj\n"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

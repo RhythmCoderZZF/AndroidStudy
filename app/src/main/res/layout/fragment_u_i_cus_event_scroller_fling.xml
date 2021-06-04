@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <com.example.android_study.ui_custom.eventUtil.Scroller.fling.ChartView-->
+    <!--        android:id="@+id/chartView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="500dp" />-->
+
+    <com.example.android_study.ui_custom.event_util.Scroller.fling_view.ScrollFlingViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fling"
+            android:textSize="30sp"/>
+    </com.example.android_study.ui_custom.event_util.Scroller.fling_view.ScrollFlingViewGroup>
+</FrameLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".android.drawable_and_graph.bitmap.AndroidBitmapActivity">
+    tools:context=".android.drawable_and_graph.bitmap.loadBitmap.AndroidBitmapActivity">
 
     <TextView
         android:id="@+id/textView28"

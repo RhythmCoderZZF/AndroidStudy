@@ -2,18 +2,12 @@ package com.example.android_study.ui_custom.study._3_gesture._1_interface
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.Choreographer
 import android.view.GestureDetector
 import android.view.MotionEvent
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
-import com.example.android_study._base.adapter.Entry
 import com.example.android_study._base.cmd.CmdUtil
-import kotlinx.android.synthetic.main.activity_rv.*
-import kotlinx.android.synthetic.main.activity_u_i_choreographer.*
 import kotlinx.android.synthetic.main.activity_u_i_cus_gesture_interface.*
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class UICusGestureInterfaceActivity : BaseActivity() {
     var showScrollParam = false

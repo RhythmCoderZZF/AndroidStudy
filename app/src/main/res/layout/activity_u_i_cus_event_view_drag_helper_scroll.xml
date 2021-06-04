@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.android_study.ui_custom.event_util.ViewDragHelper.scroll.ViewDragHelperReleaseView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/scroll1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@color/color_green3"
+        android:text="拖拽我试试" />
+
+    <TextView
+        android:id="@+id/scroll2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/deep_red"
+        android:gravity="center"
+        android:text="大力拖拽我试试" />
+</com.example.android_study.ui_custom.event_util.ViewDragHelper.scroll.ViewDragHelperReleaseView>

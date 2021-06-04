@@ -8,6 +8,7 @@ import android.os.Build
 import android.util.Log
 import android.view.Choreographer
 import com.example.android_study._base.cmd.CmdUtil
+import com.example.android_study._base.util.LogUtil
 import com.tencent.bugly.crashreport.CrashReport
 //import com.squareup.leakcanary.LeakCanary
 //import com.squareup.leakcanary.RefWatcher
@@ -32,6 +33,7 @@ class App : Application() {
     private val umAppSecret = "4f1bd38eef9ae80f79d130fb3ba9b7a2"
     override fun onCreate() {
         super.onCreate()
+        val startTime=System.currentTimeMillis()
         initFPS()
         instance = this
 //        refWatcher = setupLeakCanary() // LeakCanary创建
@@ -41,6 +43,7 @@ class App : Application() {
 
         //bugly
         CrashReport.initCrashReport(this, "36fdb1285e", true);
+        LogUtil.d("","${System.currentTimeMillis()-startTime}")
     }
 
 //    /**

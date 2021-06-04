@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.android_study.ui_custom.event_util.Scroller.fling.ScrollFlingViewGroup1
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--        android:text="1\n2\n3\n\4\n5\n6\n7\n8\n9\n10\na\n\b\nc\nd\ne\nf\n"-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="200sp" />
+    </com.example.android_study.ui_custom.event_util.Scroller.fling.ScrollFlingViewGroup1>
+</FrameLayout>

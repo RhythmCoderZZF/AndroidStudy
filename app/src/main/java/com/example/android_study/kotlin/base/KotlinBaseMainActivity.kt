@@ -7,10 +7,10 @@ import com.example.android_study._base.adapter.Entry
 import com.example.android_study.kotlin.base._1_array.KotlinArrayMainActivity
 import com.example.android_study.kotlin.base._2_function.KotlinFunctionMainActivity
 import com.example.android_study.kotlin.base._3_nullPointException.KotlinBaseNullPointMainActivity
-import kotlinx.android.synthetic.main.activity_kotlin_base_main.*
+import kotlinx.android.synthetic.main.activity_rv.*
 
 class KotlinBaseMainActivity : BaseActivity() {
-    override fun getLayoutId()= R.layout.activity_kotlin_base_main
+    override fun getLayoutId()= R.layout.activity_rv
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
         setRecyclerView(rv, listOf(

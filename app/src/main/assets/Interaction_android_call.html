@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 0 auto;
+            transition: all 1s;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div id="box"></div>
+<script>
+        function callJs(deg) {
+         document.getElementById("box").style.transform="rotateZ("+deg+")"
+        }
+        function callJs1(deg) {
+         document.getElementById("box").style.transform="rotateY("+deg+")"
+         return "js：调用成功啦！"
+        }
+</script>
+</body>
+
+</html>

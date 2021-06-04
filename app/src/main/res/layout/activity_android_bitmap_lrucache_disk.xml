@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="写入数组" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取数组" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_red" />
+
+    <Button
+        android:id="@+id/btn_write_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下载网络图片到DiskLruCache" />
+
+    <Button
+        android:id="@+id/btn_read_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取图片" />
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

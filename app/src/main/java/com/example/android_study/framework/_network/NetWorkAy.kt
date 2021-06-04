@@ -29,7 +29,7 @@ class NetWorkAy : BaseActivity() {
     /**
      * HttpUrlConnection
      */
-    fun httpUrlConnection(view: View) = Thread(Runnable {
+    fun httpUrlConnection(view: View) = Thread {
         val sb = StringBuilder()
         val url = URL("https://www.wanandroid.com")
         var httpURLConnection: HttpURLConnection? = null
@@ -54,8 +54,7 @@ class NetWorkAy : BaseActivity() {
         runOnUiThread {
             showToast(sb.toString())
         }
-    }
-    ).start()
+    }.start()
 //
     /**
      * OkHttp

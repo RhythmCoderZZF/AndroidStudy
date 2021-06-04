@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/Root"
+<com.example.android_study.ui_custom.event_util.Scroller.scroll.ScrollViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.event.conflict.FatherOutConflict
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
+    <View
+        android:id="@+id/scrollView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:background="@color/colorAccent"
-        android:layout_marginHorizontal="100dp">
+        android:background="@color/black" />
 
-        <com.example.android_study.ui_custom.event.conflict.ChildOutConflict
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/light_red"
-            android:layout_gravity="center"/>
-    </com.example.android_study.ui_custom.event.conflict.FatherOutConflict>
-
-</FrameLayout>
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/deep_red" />
+</com.example.android_study.ui_custom.event_util.Scroller.scroll.ScrollViewGroup>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.android_study.ui_custom.event_util.ViewDragHelper.drag.ViewDragHelperView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.example.android_study.ui_custom.event_util.ViewDragHelper.drag.FlashView
+        android:id="@+id/view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/black" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="我不可拖动" />
+
+    <Button
+        android:id="@+id/canscroll"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="我是可拖动的" />
+
+</com.example.android_study.ui_custom.event_util.ViewDragHelper.drag.ViewDragHelperView>

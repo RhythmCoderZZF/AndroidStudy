@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.android_study.ui_custom.event_util.ViewDragHelper.drag_edge.ViewDragHelperEdgeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="40dp"
+        android:gravity="center"
+        android:background="@color/gray">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="拖拽灰色边缘试试"
+            android:gravity="center"
+            android:background="@color/color_green3" />
+    </com.example.android_study.ui_custom.event_util.ViewDragHelper.drag_edge.ViewDragHelperEdgeView>
+
+</FrameLayout>
