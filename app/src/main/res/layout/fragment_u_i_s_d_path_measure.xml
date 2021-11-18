@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.study._demo.path_measure.PathMeasureOKView
+    <com.example.android_study.ui_custom.demo.standard.path_measure.PathMeasureOKView
         android:id="@+id/v"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

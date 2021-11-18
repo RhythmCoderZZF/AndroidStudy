@@ -19,28 +19,22 @@ class VMatrix @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
-
+private val mDrawMatrix=Matrix()
 
 
     override fun onDraw(canvas: Canvas) {
-        matrix.reset()
-        canvas.concat(matrix.apply {
-
-
-
-
-
+        mDrawMatrix.reset()
+        canvas.concat(mDrawMatrix.apply {
             postRotate(30f)
             postRotate(15f)
             postScale(2f, 2f)
             postTranslate(100f, 0f)
 
             val floatArray= FloatArray(9)
-            matrix.getValues(floatArray)
+            mDrawMatrix.getValues(floatArray)
             CmdUtil.v(floatArray.toList().toString())
-
         })
-        canvas.drawText("hello Matrix", 0f, 20f, Paint().apply {
+        canvas.drawText("hello Matrix", 0f, 40f, Paint().apply {
             textSize = 60f
             style = Paint.Style.STROKE
             strokeWidth=4f

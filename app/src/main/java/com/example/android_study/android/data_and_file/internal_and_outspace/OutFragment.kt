@@ -1,15 +1,12 @@
 package com.example.android_study.android.data_and_file.internal_and_outspace
 
-import android.content.Context
 import android.os.Bundle
 import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import com.example.android_study.R
-import com.example.android_study._base.App
 import com.example.android_study._base.BaseFragment
 import com.example.android_study._base.cmd.CmdUtil
 import kotlinx.android.synthetic.main.fragment_android_data_and_file_out_space.*

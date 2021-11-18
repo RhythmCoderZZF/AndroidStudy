@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.example.android_study.ui_custom.event_nest.nestScrollViewNest.ParentNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.android_study.event_system.event_nest.nestScrollViewNest.ParentNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,7 +15,7 @@
             android:text="a\nb\nc"
             android:textSize="50sp" />
 
-        <com.example.android_study.ui_custom.event_nest.nestScrollViewNest.ChildNestedScrollView
+        <com.example.android_study.event_system.event_nest.nestScrollViewNest.ChildNestedScrollView
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:layout_marginHorizontal="20dp"
@@ -32,25 +32,25 @@
                     android:text="a\nb\nc"
                     android:textSize="80sp" />
 
-                <com.example.android_study.ui_custom.event_nest.nestScrollViewNest.ChildNestedScrollView
+                <com.example.android_study.event_system.event_nest.nestScrollViewNest.ChildNestedScrollView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@color/exo_gray">
+                    android:background="@color/light_red">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="a\nb\nc\nd\ne\nf\ng\nh\nh\ni\nj\n"
                         android:textSize="100sp" />
-                </com.example.android_study.ui_custom.event_nest.nestScrollViewNest.ChildNestedScrollView>
+                </com.example.android_study.event_system.event_nest.nestScrollViewNest.ChildNestedScrollView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="c\nd\ne\nf\ng"
                     android:textSize="80sp" />
             </LinearLayout>
-        </com.example.android_study.ui_custom.event_nest.nestScrollViewNest.ChildNestedScrollView>
+        </com.example.android_study.event_system.event_nest.nestScrollViewNest.ChildNestedScrollView>
 
         <TextView
             android:layout_width="match_parent"
@@ -58,4 +58,4 @@
             android:text="a\nb\nc\nd\ne\nf\ng"
             android:textSize="50sp" />
     </LinearLayout>
-</com.example.android_study.ui_custom.event_nest.nestScrollViewNest.ParentNestedScrollView>
+</com.example.android_study.event_system.event_nest.nestScrollViewNest.ParentNestedScrollView>

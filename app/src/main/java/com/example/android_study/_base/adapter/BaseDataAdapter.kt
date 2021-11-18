@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.example.android_study._base.cmd.CmdUtil
 
 /**
  * @author kuky.
@@ -15,9 +16,11 @@ abstract class BaseDataAdapter<T : Any, VB : ViewDataBinding>(val callback: Diff
     ListAdapter<T, BaseViewHolder<VB>>(callback) {
 
     var itemListener: OnItemClickListener<T>? = null
+    var itemListener2: OnItemClickListener2<T>? = null
     var itemLongClickListener: OnItemLongClickListener<T>? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<VB> {
+        CmdUtil.e("onCreateViewHolder")
         return BaseViewHolder(
             DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
@@ -33,7 +36,10 @@ abstract class BaseDataAdapter<T : Any, VB : ViewDataBinding>(val callback: Diff
         setVariable(data, position, holder)
         holder.binding.executePendingBindings()
         holder.binding.root.run {
-            setOnClickListener { itemListener?.onItemClick(position, it, data) }
+            setOnClickListener {
+                itemListener?.onItemClick(position, it, data)
+                itemListener2?.onItemClick(position, holder, data)
+            }
             setOnLongClickListener {
                 itemLongClickListener?.onItemLongClick(position, it,data)
                 false

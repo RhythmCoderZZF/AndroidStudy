@@ -13,7 +13,7 @@ import com.example.android_study._base.cmd.CmdUtil
  * Date: 2020/6/28
  * Description:
  */
-open class BaseFragment : Fragment() {
+open class BaseFragment() : Fragment() {
     open val TAG = "Fragment[${this.hashCode()}]"
     protected var showLifecycle = false //向cmd打印生命周期
 
@@ -72,6 +72,13 @@ open class BaseFragment : Fragment() {
         if (showLifecycle)
             CmdUtil.i("$TAG：onStop")
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if (showLifecycle)
+            CmdUtil.i("$TAG：onSaveInstanceState")
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

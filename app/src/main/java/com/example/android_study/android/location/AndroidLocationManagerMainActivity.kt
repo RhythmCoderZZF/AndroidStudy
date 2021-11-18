@@ -16,7 +16,7 @@ class AndroidLocationManagerMainActivity : BaseActivity() {
 
     private var locationManager: LocationManager? = null
     private val callBack = object : LocationListener {
-        override fun onLocationChanged(location: Location?) {
+        override fun onLocationChanged(location: Location) {
             CmdUtil.i("onLocationChanged:$location")
         }
 
@@ -24,11 +24,11 @@ class AndroidLocationManagerMainActivity : BaseActivity() {
             CmdUtil.v("onStatusChanged:$provider | $status")
         }
 
-        override fun onProviderEnabled(provider: String?) {
+        override fun onProviderEnabled(provider: String) {
             CmdUtil.v("onProviderEnabled:$provider")
         }
 
-        override fun onProviderDisabled(provider: String?) {
+        override fun onProviderDisabled(provider: String) {
             CmdUtil.v("onProviderDisabled:$provider")
         }
     }

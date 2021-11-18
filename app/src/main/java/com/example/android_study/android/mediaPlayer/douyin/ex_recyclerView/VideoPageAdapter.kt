@@ -49,16 +49,16 @@ class VideoPageAdapter : BaseDataAdapter<String, ItemMediaDouYinRecyclerViewBind
         }
 
         holder.binding.surfaceView.holder.addCallback(object : SurfaceHolder.Callback {
-            override fun surfaceCreated(holder: SurfaceHolder?) {
+            override fun surfaceCreated(holder: SurfaceHolder) {
                 CmdUtil.v("surface${position}创建")
                 mMediaPlayer.setDisplay(holder)
             }
 
-            override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+            override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
                 CmdUtil.v("surface${position}改变[$format $width $height]")
             }
 
-            override fun surfaceDestroyed(holder: SurfaceHolder?) {
+            override fun surfaceDestroyed(holder: SurfaceHolder) {
                 CmdUtil.v("surface${position}销毁")
             }
         })

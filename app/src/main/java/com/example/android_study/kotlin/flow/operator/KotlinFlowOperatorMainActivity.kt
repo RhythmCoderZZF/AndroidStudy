@@ -15,6 +15,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
 
     override fun getLayoutId() = R.layout.activity_kotlin_flow_operator_main
 
+
     override fun initViewAndData(savedInstanceState: Bundle?) {
         CmdUtil.showWindow()
         //**1. 过渡操作符**
@@ -22,26 +23,26 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
             //map
             launch {
                 (0..3).asFlow()
-                        .map { element ->
-                            performReq(element)
-                        }
-                        .collect {
-                            CmdUtil.v(it)
-                        }
+                    .map { element ->
+                        performReq(element)
+                    }
+                    .collect {
+                        CmdUtil.v(it)
+                    }
             }
         }
         btnFilter.setOnClickListener {
             //filter
             launch {
                 (0..3).asFlow()
-                        .filter { element ->
-                            element > 0
-                        }.map { element ->
-                            performReq(element)
-                        }
-                        .collect { element ->
-                            CmdUtil.v(element)
-                        }
+                    .filter { element ->
+                        element > 0
+                    }.map { element ->
+                        performReq(element)
+                    }
+                    .collect { element ->
+                        CmdUtil.v(element)
+                    }
             }
         }
 
@@ -50,13 +51,13 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
             //transform
             launch {
                 (0..3).asFlow()
-                        .transform {// map{ Int -> String } = transform{ Int -> emit(String) }
-                            emit(performReq(it))
-                            emit("跟踪数据")
-                        }
-                        .collect {
-                            CmdUtil.v(it)
-                        }
+                    .transform {
+                        emit(performReq(it))
+                        emit("跟踪数据")
+                    }
+                    .collect {
+                        CmdUtil.v(it)
+                    }
             }
         }
         //**3. 限长操作符**
@@ -64,43 +65,59 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
             //take
             launch {
                 (0..3).asFlow()
-                        .transform {
-                            try {
-                                emit(performReq(it))
-                                emit(performReq(it))
-                                emit(performReq(10000))
-                            } finally {
-                                CmdUtil.e("取消 $it")
-                            }
+                    .transform {
+                        try {
+                            emit(performReq(it))
+                        } catch (e: Exception) {
+                            CmdUtil.e(e.toString())
                         }
-                        .take(2)
-                        .collect {
-                            CmdUtil.v(it)
+                    }
+                    .take(2)
+                    .collect {
+                        CmdUtil.v(it)
+                    }
+            }
+        }
+
+        btnDrop.setOnClickListener {
+            //drop
+            launch {
+                (0..3).asFlow()
+                    .transform {
+                        try {
+                            emit(performReq(it))
+                        } catch (e: Exception) {
+                            CmdUtil.e(e.toString())
                         }
+                    }
+                    .drop(2)
+                    .collect {
+                        CmdUtil.v(it)
+                    }
             }
         }
         //**4. 末端操作符**
         btnReduce.setOnClickListener {
             //reduce
             launch {
-                val result = (1..4).asFlow()
-                        .reduce { accumulator, value ->
-                            delay(1000)
-                            CmdUtil.v("accumulator:$accumulator | value:$value")
-                            accumulator + value
-                        }
+                val result = (0..4).asFlow()
+                    .reduce { accumulator, value ->
+                        CmdUtil.v("accumulator:$accumulator | value:$value")
+                        delay(1000)
+                        accumulator + value
+                    }
                 CmdUtil.v("result:$result")
             }
         }
         btnFold.setOnClickListener {
             //fold
             launch {
-                val result = (1..4).asFlow()
-                        .fold(5) { accumulator, value ->
-                            delay(1000)
-                            CmdUtil.v("accumulator:$accumulator | value:$value")
-                            accumulator + value
-                        }
+                val result = (0..4).asFlow()
+                    .fold(1) { accumulator, value ->
+                        CmdUtil.v("accumulator:$accumulator | value:$value")
+                        delay(1000)
+                        accumulator + value
+                    }
                 CmdUtil.v("result:$result")
             }
         }
@@ -108,11 +125,11 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
             //toList
             launch {
                 val result = (1..4).asFlow()
-                        .transform {
-                            delay(500)
-                            CmdUtil.v("$it")
-                            emit(it)
-                        }.toList()
+                    .transform {
+                        delay(500)
+                        CmdUtil.v("$it")
+                        emit(it)
+                    }.toList()
                 CmdUtil.v("result:$result")
             }
         }
@@ -121,18 +138,18 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
             //toList
             launch {
                 (1..4).asFlow()
-                        .map {
-                            CmdUtil.i("1@${Thread.currentThread().name}")
-                            performReq(it)
-                        }
-                        .flowOn(IO)
-                        .map {
-                            CmdUtil.e("2@${Thread.currentThread().name}")
-                            "$it!!"
-                        }
-                        .collect {
-                            CmdUtil.v("result:$it")
-                        }
+                    .map {
+                        CmdUtil.i("1@${Thread.currentThread().name}")
+                        performReq(it)
+                    }
+                    .flowOn(IO)
+                    .map {
+                        CmdUtil.e("2@${Thread.currentThread().name}")
+                        "$it!!"
+                    }
+                    .collect {
+                        CmdUtil.v("result:$it")
+                    }
             }
         }
         //**6. 组合多个流**
@@ -171,17 +188,21 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
         }
         //**6. 展平流——————————**
         btnFlowNest.setOnClickListener {
-            //双collect展平
+            //嵌套Flow
             launch {
                 val startTime = System.currentTimeMillis() // 记录开始时间
                 (1..3).asFlow().onEach {
                     CmdUtil.v("发送请求参数$it")
                     delay(100)
                 }.map {
+                    CmdUtil.v("map")
                     requestFlow(it)
                 }.collect { flow ->
+                    CmdUtil.v("<")
                     flow.collect { value ->
+                        CmdUtil.v("<<")
                         requestFlowResult(value).collect { result ->
+                            CmdUtil.v("<<<")
                             CmdUtil.i("$result cost ${System.currentTimeMillis() - startTime} ms")
                         }
                     }
@@ -198,15 +219,42 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
                 }.map {
                     requestFlow(it)
                 }.flattenConcat()
-                        .map {
-                            requestFlowResult(it)
-                        }
-                        .flattenConcat()
-                        .collect { value ->
-                            CmdUtil.i("$value cost ${System.currentTimeMillis() - startTime} ms")
-                        }
+                    .map {
+                        requestFlowResult(it)
+                    }
+                    .flattenConcat()
+                    .collect { value ->
+                        CmdUtil.i("$value cost ${System.currentTimeMillis() - startTime} ms")
+                    }
             }
-
+        }
+        btnMyFlattenConcat.setOnClickListener {
+            /*自实现flattenConcat*/
+            launch {
+                val startTime = System.currentTimeMillis() // 记录开始时间
+                (1..3).asFlow().onEach {
+                    CmdUtil.v("发送请求参数$it")
+                    delay(100)
+                }.map {
+                    CmdUtil.v("map")
+                    requestFlow(it)
+                }.let {
+                    CmdUtil.v("let")
+                    val f = flow {
+                        CmdUtil.v("flow")
+                        it.collect {
+                            CmdUtil.v("collect1")
+                            it.collect {
+                                CmdUtil.v("collect2")
+                                emit(it)
+                            }
+                        }
+                    }
+                    f
+                }.collect { value ->
+                    CmdUtil.i("$value cost ${System.currentTimeMillis() - startTime} ms")
+                }
+            }
         }
         btnFlatMapConcat.setOnClickListener {
             //flatMapConcat展平
@@ -271,12 +319,13 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
 
     fun requestFlow(i: Int): Flow<Int> = flow {
         delay(300)
-        CmdUtil.v("修改第一次请求参数${i}继续发送")
+        CmdUtil.v("修改Int")
         emit(i + 10)
     }
 
     fun requestFlowResult(i: Int): Flow<String> = flow {
         delay(500)
+        CmdUtil.v("Int转换成String")
         emit("获得第二次请求参数:$i")
     }
 }

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android_study.R
 import com.example.android_study.ui.recyclerView.gesture.adapter.GestureRvAdapter
 import com.example.android_study.ui.recyclerView.gesture.core.ItemTouchHelperCallback
-import kotlinx.android.synthetic.main.activity_item_touch_hel_recycler_view.*
+import kotlinx.android.synthetic.main.activity_rv.*
 import java.util.*
 
 class UIRecyclerViewDragActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class UIRecyclerViewDragActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_item_touch_hel_recycler_view)
+        setContentView(R.layout.activity_rv)
 
         adapter = GestureRvAdapter(mDatas)
 

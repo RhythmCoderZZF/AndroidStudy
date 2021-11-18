@@ -5,10 +5,9 @@ import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.adapter.Entry
 import com.example.android_study.ui_custom.study._1_standard.UICusStandardActivity
-import com.example.android_study.ui_custom.study._demo.UICusStandardDemoActivity
+import com.example.android_study.ui_custom.demo.standard.UICusStandardDemoActivity
 import com.example.android_study.ui_custom.study._2_measure_layout.UICusMeasureLayoutActivity
 import com.example.android_study.ui_custom.study._3_gesture.UICusGestureActivity
-import com.example.android_study.ui_custom.anim.UICusAnimActivity
 import com.example.android_study.ui_custom.study._Bitmap._UICusBitmapActivity
 import com.example.android_study.ui_custom.study._Camera._UICusCameraActivity
 import com.example.android_study.ui_custom.study._Canvas._UICusStudyCanvasActivity

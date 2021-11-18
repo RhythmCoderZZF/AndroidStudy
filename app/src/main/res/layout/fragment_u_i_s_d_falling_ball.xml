@@ -10,7 +10,7 @@
         android:layout_height="30dp"
         android:src="@drawable/shape_ball" />
 
-    <com.example.android_study.ui_custom.study._demo.falling_ball.FallingBallView
+    <com.example.android_study.ui_custom.demo.standard.falling_ball.FallingBallView
         android:id="@+id/ball1"
         android:layout_width="30dp"
         android:layout_height="30dp"

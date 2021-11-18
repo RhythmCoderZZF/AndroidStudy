@@ -80,6 +80,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
+        <Button
+            android:id="@+id/btnDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="drop"
+            app:layout_constraintStart_toEndOf="@+id/btnTake"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
         <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
@@ -196,14 +205,21 @@
             android:text="flattenConcat"
             app:layout_constraintStart_toEndOf="@+id/btnFlowNest"
             app:layout_constraintTop_toTopOf="@+id/btnFlowNest" />
+        <Button
+            android:id="@+id/btnMyFlattenConcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自实现flattenConcat"
+            app:layout_constraintStart_toEndOf="@+id/btnFlattenConcat"
+            app:layout_constraintTop_toTopOf="@+id/btnFlattenConcat" />
 
         <Button
             android:id="@+id/btnFlatMapConcat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="flatMapConcat"
-            app:layout_constraintStart_toEndOf="@+id/btnFlattenConcat"
-            app:layout_constraintTop_toTopOf="@+id/btnFlattenConcat" />
+            app:layout_constraintStart_toEndOf="@+id/btnFlatMapMerge"
+            app:layout_constraintTop_toTopOf="@+id/btnFlatMapMerge" />
 
         <Button
             android:id="@+id/btnFlatMapMerge"

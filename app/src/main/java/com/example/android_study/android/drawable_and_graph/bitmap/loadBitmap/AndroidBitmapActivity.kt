@@ -24,7 +24,7 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
         val bytes = assets.open("bigPic.png").readBytes()
         CmdUtil.v("资源bytes:${bytes.size / 1024 / 1024} M")
         val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
-        val size = bitmap.allocationByteCount / 1024 / 1024
+        val size = bitmap.allocationByteCount / 1024 / 1024f
         iv.setImageBitmap(bitmap)
         CmdUtil.v("原图 宽:${bitmap.width} 高:${bitmap.height} size:$size M")
 

@@ -4,20 +4,16 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'     //apt框架根据注解生成代码(使用kapt就不要用annotationProcessor)
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.android_study"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion 23
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         dataBinding.enabled = true
-        ndk {
-            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
-            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-        }
     }
     viewBinding {
         enabled = true
@@ -25,19 +21,19 @@ android {
     dataBinding {
         enabled = true
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            debuggable true
-            minifyEnabled false  //不启用Proguard
-            zipAlignEnabled false //是否启用zipAlign压缩
-            signingConfig signingConfigs.debug
-        }
-    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//        debug {
+//            debuggable true
+//            minifyEnabled false  //不启用Proguard
+//            zipAlignEnabled false //是否启用zipAlign压缩
+//            signingConfig signingConfigs.debug
+//        }
+//    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -55,7 +51,6 @@ android {
                     'src/main/res',
 
                     //layout
-                    'src/main/res/layout/_third',
                     'src/main/res/layout/_android',
                     'src/main/res/layout/_juc',
                     'src/main/res/layout/_framework',
@@ -70,44 +65,59 @@ android {
                     'src/main/res/drawable/_ui'
             ]
         }
-//        androidTest {
-//            java.srcDirs = ['src/main/java/com/example/android_study/_kotlin']
-//        }
-//        test {
-//            java.srcDirs = ['src/main/java/com/example/android_study/_kotlin']
-//        }
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //base
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    //**base
+    implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'q.rorbin:VerticalTabLayout:1.2.5'
     implementation 'com.hyman:flowlayout-lib:1.1.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'//BaseRecyclerViewHolder
+    implementation 'com.github.razerdp:BasePopup:2.2.8'
 
-    //JetPack
+    //**JetPack
     def lifecycle_extensions = "2.2.0"
-    def lifecycle_version = "2.3.0-beta01"
+    def lifecycle_version = "2.3.1"
     def paging_version = "3.0.0-alpha09"
-    def nav_version = "2.3.2"
-    def room_version = "2.2.5"
+    def nav_version = "2.3.5"
+    def room_version = "2.3.0"
+    def fragment_version = "1.3.6"
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extensions"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
     implementation "androidx.paging:paging-common-ktx:$paging_version"
-    //cameraX
-    def camerax_version = "1.0.0-rc01"
+
+    //**kotlin
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'        //协程
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
+    //**test
+    androidTestImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    testImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "com.orhanobut:logger:2.1.1"
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+    //**cameraX
+    def camerax_version = "1.1.0-alpha08"
     // CameraX core library using camera2 implementation
-    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-core:$camerax_version"
     implementation "androidx.camera:camera-camera2:$camerax_version"
     // CameraX Lifecycle Library
     implementation "androidx.camera:camera-lifecycle:$camerax_version"
@@ -116,91 +126,33 @@ dependencies {
     // If you want to additionally use the CameraX Extensions library
     implementation "androidx.camera:camera-extensions:1.0.0-alpha20"
 
-    //kotlin
-    implementation "androidx.core:core-ktx:1.3.2"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
-//      implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"        //反射
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0'        //协程
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0'
-
-    //test
-    androidTestImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    testImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation "com.orhanobut:logger:2.1.1"
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.3'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
-
-    //ui
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
-    implementation 'com.google.android.material:material:1.3.0-alpha04'
-//    def qmui_arch_version = '2.0.0-alpha10'
-//    implementation "com.qmuiteam:arch:$qmui_arch_version"
-//    kapt "com.qmuiteam:arch-compiler:$qmui_arch_version"
+    //**ui
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
-    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
     implementation 'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
-    implementation 'com.github.razerdp:BasePopup:2.2.8'
-    implementation 'com.contrarywind:Android-PickerView:4.1.9'
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'//BaseRecyclerViewHolder
     implementation 'com.github.zhpanvip:BannerViewPager:3.2.0'//banner
-    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.0'//图片选择裁剪框架
+//    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0' //pictureselector框架使用了该框架
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 
-    //framework
+
+    //**framework
     implementation 'com.jakewharton:butterknife:10.2.1'
     kapt 'com.jakewharton:butterknife-compiler:10.2.1'
     implementation "org.permissionsdispatcher:permissionsdispatcher:4.8.0"      //权限
     kapt "org.permissionsdispatcher:permissionsdispatcher-processor:4.8.0"
     implementation 'com.permissionx.guolindev:permissionx:1.4.0'//权限
-    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.7'                   //zxing
     implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 
-    //AMap
-    implementation 'com.amap.api:3dmap:7.6.0'  //3D MAP需要集成so文件
-    implementation 'com.amap.api:location:5.2.0'
-    implementation 'com.amap.api:search:7.6.0'
-
-    //IM
-    implementation 'cn.rongcloud.sdk:im_lib:4.0.1'
-    implementation 'cn.rongcloud.sdk:im_kit:4.0.1'
-
     //Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
 
-    //友盟————————————————————————————————————————————————————————————————————————————
-    //基础组件库依赖(必须) Push 6.1.0版本必须升级新版本Common SDK
-    implementation 'com.umeng.umsdk:common:9.1.0'
-    implementation 'com.umeng.umsdk:utdid:1.5.2'
-    implementation 'com.umeng.umsdk:asms:1.1.3'
-    implementation 'com.umeng.umsdk:crash:0.0.4'
-
-    //友盟push相关依赖(必须)
-    implementation 'com.umeng.umsdk:push:6.1.0'
-
-    implementation 'com.umeng.umsdk:alicloud-httpdns:1.2.5'
-    implementation 'com.umeng.umsdk:alicloud-utils:1.1.5'
-    implementation 'com.umeng.umsdk:alicloud_beacon:1.0.1'
-
-    implementation 'com.umeng.umsdk:agoo-accs:3.3.8.8-open-fix2'
-    implementation 'com.umeng.umsdk:agoo_networksdk:3.5.5'
-    implementation 'com.umeng.umsdk:agoo_tlog:3.0.0.17'
-    implementation 'com.umeng.umsdk:agoo_tnet4android:3.1.14.9'
-
-    implementation 'com.umeng.umsdk:xiaomi-push:3.7.0'      //小米厂商离线消息推送
-    implementation 'com.umeng.umsdk:xiaomi-umengaccs:1.1.4'
-
-    //音视频
-    implementation 'com.shuyu:GSYVideoPlayer:8.0.0'
-    implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'
+//    //音视频
+    implementation('com.shuyu:GSYVideoPlayer:8.0.0')
+    implementation 'cn.jzvd:jiaozivideoplayer:7.6.0'
     implementation 'com.google.android.exoplayer:exoplayer:2.12.1'//exoplayer
-
-    //bugly
-    implementation 'com.tencent.bugly:crashreport:3.2.422' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
-    implementation 'com.tencent.bugly:nativecrashreport:3.7.5' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
-
 }

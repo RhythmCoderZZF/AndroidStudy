@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.study._demo.paint_bsr_canvas.BSRCanvas
+    <com.example.android_study.ui_custom.demo.standard.paint_bsr_canvas.BSRCanvas
         android:id="@+id/v"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

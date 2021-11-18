@@ -65,7 +65,7 @@ class ConnectionManagerActivity : BaseActivity() {
 
         networkCallback = object : ConnectivityManager.NetworkCallback() {
 
-            override fun onAvailable(network: Network?) {
+            override fun onAvailable(network: Network) {
                 LogUtil.d("zzz", network.toString())
                 LogUtil.d("zzz", connectivityManager.bindProcessToNetwork(network).toString())
 ////                    network.socketFactory.

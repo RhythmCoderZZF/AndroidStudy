@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.study._demo.spider_web.SpiderView
+    <com.example.android_study.ui_custom.demo.standard.spider_web.SpiderView
         android:id="@+id/vSpider"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

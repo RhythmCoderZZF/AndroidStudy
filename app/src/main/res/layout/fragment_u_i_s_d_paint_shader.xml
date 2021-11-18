@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.study._demo.paint_shader.VShaderLook
+    <com.example.android_study.ui_custom.demo.standard.paint_shader.VShaderLook
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/grey_bg"

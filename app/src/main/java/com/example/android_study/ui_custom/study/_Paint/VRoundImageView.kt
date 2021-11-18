@@ -4,11 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Path
-import android.graphics.Rect
 import android.graphics.RectF
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
-import androidx.constraintlayout.solver.widgets.analyzer.Direct
 import com.example.android_study.R
 
 /**

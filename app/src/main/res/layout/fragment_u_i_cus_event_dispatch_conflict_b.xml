@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.event.conflict.Father
+    <com.example.android_study.event_system.event.conflict.Father
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_gravity="center"
         android:background="@color/colorAccent"
         android:layout_marginHorizontal="100dp">
 
-        <com.example.android_study.ui_custom.event.conflict.Child
+        <com.example.android_study.event_system.event.conflict.Child
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@color/light_red"
             android:layout_gravity="center"/>
-    </com.example.android_study.ui_custom.event.conflict.Father>
+    </com.example.android_study.event_system.event.conflict.Father>
 </FrameLayout>

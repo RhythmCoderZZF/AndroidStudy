@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.viewSystem.choreographer.UIChoreographerActivity">
+    tools:context=".ui.viewSystem.choreographer.UIViewSystemChoreographerActivity">
 
     <Button
         android:id="@+id/createWindow"

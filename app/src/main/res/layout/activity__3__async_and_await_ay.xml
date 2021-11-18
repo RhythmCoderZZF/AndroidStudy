@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kotlin.coroutine._4_AsyncAndAwaitAy">
+    tools:context=".kotlin._2_coroutine._4_AsyncAndAwaitAy">
 
     <Button
         android:id="@+id/button"

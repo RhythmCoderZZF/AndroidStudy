@@ -11,7 +11,7 @@ import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.adapter.Entry
 import com.example.android_study.ui_custom.anim.anim.UICusAnimMainActivity
 import com.example.android_study.ui_custom.anim.animator._UICusMainActivity
-import com.example.android_study.ui_custom.anim.path_measure._UIPathMeasureMainActivity
+import com.example.android_study.ui_custom.anim.path_measure.UIPathMeasureStandardActivity
 import com.example.android_study.ui_custom.anim.svg._UISVGMainActivity
 import com.example.android_study.ui_custom.anim.transition.UITransitionMainActivity
 import com.example.android_study.ui_custom.anim.viewGroup_anim._UIViewGroupAnimMainActivity
@@ -44,7 +44,7 @@ class UICusAnimActivity : BaseActivity() {
                 Entry("1.视图动画", UICusAnimMainActivity::class.java, "4种补间动画(TweenAnimation)、帧动画的(FrameAnimation) xml和code玩法,"),
                 Entry("2.属性动画", _UICusMainActivity::class.java, "4种补间动画、帧动画的xml和code玩法"),
                 Entry("3.ViewGroup动画", _UIViewGroupAnimMainActivity::class.java),
-                Entry("4.PathMeasure", _UIPathMeasureMainActivity::class.java,"用于对Path的追踪截取，其中最有用的getSegment函数用于对Path的截取用于矢量动画"),
+                Entry("4.PathMeasure", UIPathMeasureStandardActivity::class.java,"用于对Path的追踪截取，其中最有用的getSegment函数用于对Path的截取用于矢量动画"),
                 Entry("5.SVG", _UISVGMainActivity::class.java,""),
                 Entry("6.Transition", UITransitionMainActivity::class.java,"过渡")
         ))

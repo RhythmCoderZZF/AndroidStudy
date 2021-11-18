@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.android_study.ui_custom.event_nest.nest.SuspendedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.android_study.event_system.event_nest.nest.SuspendedLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -28,4 +28,4 @@
             android:text="a\nb\nc\nd\ne\nf\ng\nh\nh\ni\nj\n"
             android:textSize="100sp" />
     </androidx.core.widget.NestedScrollView>
-</com.example.android_study.ui_custom.event_nest.nest.SuspendedLayout>
+</com.example.android_study.event_system.event_nest.nest.SuspendedLayout>

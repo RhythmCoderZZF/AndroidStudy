@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study.ui.recyclerView.section.adapter.SectionAdapter
-import kotlinx.android.synthetic.main.activity_item_touch_hel_recycler_view.*
+import kotlinx.android.synthetic.main.activity_rv.*
 
 const val DEFAULT_SHOW_LIST = 3
 
@@ -42,7 +42,7 @@ class UIRecyclerViewSectionActivity : BaseActivity() {
     )
 
 
-    override fun getLayoutId() = R.layout.activity_u_i_recycler_view_section
+    override fun getLayoutId() = R.layout.activity_rv
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
 

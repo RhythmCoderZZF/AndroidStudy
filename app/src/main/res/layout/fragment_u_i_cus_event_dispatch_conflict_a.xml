@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.event.conflict.FatherOutConflict
+    <com.example.android_study.event_system.event.conflict.FatherOutConflict
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_gravity="center"
         android:background="@color/colorAccent"
         android:layout_marginHorizontal="100dp">
 
-        <com.example.android_study.ui_custom.event.conflict.ChildOutConflict
+        <com.example.android_study.event_system.event.conflict.ChildOutConflict
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@color/light_red"
             android:layout_gravity="center"/>
-    </com.example.android_study.ui_custom.event.conflict.FatherOutConflict>
+    </com.example.android_study.event_system.event.conflict.FatherOutConflict>
 
 </FrameLayout>

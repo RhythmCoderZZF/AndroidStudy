@@ -26,17 +26,17 @@ class _LockCanvasDirtySurfaceView @JvmOverloads constructor(
 
     init {
         holder.addCallback(object : SurfaceHolder.Callback {
-            override fun surfaceCreated(holder: SurfaceHolder?) {
+            override fun surfaceCreated(holder: SurfaceHolder) {
                 scope.launch(IO) {
                     drawText(holder)
                 }
 
             }
 
-            override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+            override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
             }
 
-            override fun surfaceDestroyed(holder: SurfaceHolder?) {
+            override fun surfaceDestroyed(holder: SurfaceHolder) {
                 scope.cancel()
             }
         })

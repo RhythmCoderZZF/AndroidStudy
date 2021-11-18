@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="radius" format="dimension" />
+
     <declare-styleable name="EditTextWithClear">
         <attr name="clearDrawable" format="reference" />
     </declare-styleable>
@@ -36,5 +37,11 @@
 
     <declare-styleable name="EventMonitorView">
         <attr name="tag" format="string" />
+    </declare-styleable>
+
+
+    <attr name="foldingLayoutStyle" format="reference" />
+    <declare-styleable name="FoldingLayout">
+        <attr name="foldNumber" format="integer" />
     </declare-styleable>
 </resources>

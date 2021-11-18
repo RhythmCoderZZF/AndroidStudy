@@ -11,28 +11,28 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android_study.Java.Juc.JavaJucActivity;
+import com.example.android_study.Java.MemoryModel.JavaMMActivity;
+import com.example.android_study.Java.io.JavaIOActivity;
 import com.example.android_study._base.BaseActivity;
 import com.example.android_study._base.NavigationAdapter;
 import com.example.android_study._base.NavigationListData;
 import com.example.android_study._base.util.ToolbarHelper;
-import com.example.android_study.android._activity.LifecycleActivity;
-import com.example.android_study.android._database.MainDataBaseAy;
-import com.example.android_study.android._webview.AndroidWebViewMainActivity;
+import com.example.android_study.android.activity.AndroidActivity;
+import com.example.android_study.android.database.MainDataBaseAy;
+import com.example.android_study.android.webview.AndroidWebViewMainActivity;
 import com.example.android_study.android.data_and_file.AndroidDataAndFileMainActivity;
 import com.example.android_study.android.drawable_and_graph.AndroidDrawableGraphMainActivity;
 import com.example.android_study.android.ipc.IPCMainActivity;
 import com.example.android_study.android.location.AndroidLocationManagerMainActivity;
 import com.example.android_study.android.wifi.WifiMainActivity;
+import com.example.android_study.event_system.multi_touch.EventMultiTouchMainActivity;
 import com.example.android_study.framework.glide.FWGlideAy;
-import com.example.android_study.java.io.JavaIOActivity;
 import com.example.android_study.jetpack.camera.CameraXMainActivity;
-import com.example.android_study.android.fragment.FragmentMainActivity;
 import com.example.android_study.android.handler.HandlerMainActivity;
 import com.example.android_study.android.mediaPlayer.MediaPlayerMainActivity;
 import com.example.android_study.android.service.ServiceMainActivity;
 import com.example.android_study.framework._network.NetWorkAy;
-import com.example.android_study.framework._permission.PermissionAy;
-import com.example.android_study.java.juc.JavaJucActivity;
 import com.example.android_study.jetpack.databinding.DataBindingAy;
 import com.example.android_study.jetpack.demo_aac.ui.activity.AACDemoActivity;
 import com.example.android_study.jetpack.demo_wanandroid.WanandroidMainActivity;
@@ -43,22 +43,21 @@ import com.example.android_study.jetpack.navigation.NavigationTestActivity;
 import com.example.android_study.jetpack.paging3.PagingAy;
 import com.example.android_study.jetpack.room.RoomAy;
 import com.example.android_study.jetpack.viewmodel.JetpackViewModelMainActivity;
-import com.example.android_study.kotlin.base.KotlinBaseMainActivity;
+import com.example.android_study.kotlin._1_base.KotlinBaseMainActivity;
+import com.example.android_study.kotlin.channel.KotlinChannelMainActivity;
 import com.example.android_study.kotlin.collection.CollectionMainActivity;
-import com.example.android_study.kotlin.coroutine.CoroutinesAy;
+import com.example.android_study.kotlin._2_coroutine.CoroutinesAy;
 import com.example.android_study.kotlin.coroutine_core.CoroutineCoreActivity;
 import com.example.android_study.kotlin.flow.KotlinFlowMainActivity;
 import com.example.android_study.network.okhttp.OkHttpMainActivity;
-import com.example.android_study.other.bugly.OtherBuglyActivity;
+import com.example.android_study.other.adb.ADBActivity;
 import com.example.android_study.other.status_bar.common.StatusBarAy;
 import com.example.android_study.other.utils.UtilsActivity;
-import com.example.android_study.other.zxing.ZXingDemoAy;
 import com.example.android_study.performance_optimization.LeakCanaryAy;
 import com.example.android_study.performance_optimization.POMemoryMainActivity;
 import com.example.android_study.samples.gallery.GalleryMainActivity;
-import com.example.android_study.third.map.AmapActivity;
-import com.example.android_study.third.picture_selector.ThirdPictureSelectorMainActivity;
-import com.example.android_study.third.rong_im.ImActivity;
+import com.example.android_study.samples.largePhoto.LargePhotoMainActivity;
+import com.example.android_study.samples.photoTag.PhotoTagMainActivity;
 import com.example.android_study.ui.popup_window.PopupWindowAy;
 import com.example.android_study.ui.materialDesign.MaterialDesignMainActivity;
 import com.example.android_study.ui.recyclerView.UIRecyclerViewMainActivity;
@@ -66,15 +65,12 @@ import com.example.android_study.ui.viewSystem.UIViewSystemActivity;
 import com.example.android_study.ui.viewpager2.UIViewPager2MainActivity;
 import com.example.android_study.ui_custom.anim.UICusAnimActivity;
 import com.example.android_study.ui_custom.calendar.CalendarAy;
-import com.example.android_study.ui_custom.event.UICusEventActivity;
-import com.example.android_study.ui_custom.event_util.UICusEventUtilActivity;
-import com.example.android_study.ui_custom.event_nest.UICusEventNestActivity;
+import com.example.android_study.event_system.event.UICusEventActivity;
+import com.example.android_study.event_system.event_util.UICusEventUtilActivity;
+import com.example.android_study.event_system.event_nest.UICusEventNestActivity;
+import com.example.android_study.ui_custom.demo.UICusDemoMainActivity;
 import com.example.android_study.ui_custom.samples.UICusSamplesActivity;
 import com.example.android_study.ui_custom.study.UICusStudyActivity;
-import com.example.android_study.ui_third.AAChartCore.AAChartCoreMainActivity;
-import com.example.android_study.ui_third.BasePopup.UITBasePopupMainActivity;
-import com.example.android_study.ui_third.BaseRecyclerViewHolder.UITBaseRecyclerViewHolderMainActivity;
-import com.example.android_study.ui_third.WheelView.UITPickerViewMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -113,14 +109,8 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         List<NavigationListData.Entry> entries = new ArrayList<>();
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Activity");
-            entry.setPath(LifecycleActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Fragment");
-            entry.setPath(FragmentMainActivity.class);
+            entry.setContent("Activity与Fragment");
+            entry.setPath(AndroidActivity.class);
             entries.add(entry);
         }
         {
@@ -143,7 +133,7 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("持久化");
+            entry.setContent("持久化技术");
             entry.setPath(MainDataBaseAy.class);
             entries.add(entry);
         }
@@ -187,133 +177,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // 自定义View
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("自定义View");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("学习系列🚀🚀");
-            entry.setPath(UICusStudyActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("过渡与动画");
-            entry.setPath(UICusAnimActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("事件分发🚀🚀");
-            entry.setPath(UICusEventActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("事件处理工具类");
-            entry.setPath(UICusEventUtilActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("嵌套滑动");
-            entry.setPath(UICusEventNestActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("基础案例");
-            entry.setPath(UICusSamplesActivity.class);
-            entries.add(entry);
-        }
-
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("日历");
-            entry.setPath(CalendarAy.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
-    // UI
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("UI");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Android图形系统");
-            entry.setPath(UIViewSystemActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("MaterialDesign");
-            entry.setPath(MaterialDesignMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("PopupWindow");
-            entry.setPath(PopupWindowAy.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("ViewPager2&TabLayout");
-            entry.setPath(UIViewPager2MainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("RecyclerView");
-            entry.setPath(UIRecyclerViewMainActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
-    // Java
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("Java");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Juc");
-            entry.setPath(JavaJucActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("IO");
-            entry.setPath(JavaIOActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
-    //网络
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("网络");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Okhttp");
-            entry.setPath(OkHttpMainActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
     // Kotlin
     {
         NavigationListData data = new NavigationListData();
@@ -349,15 +212,21 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             entry.setPath(KotlinFlowMainActivity.class);
             entries.add(entry);
         }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("Channnel");
+            entry.setPath(KotlinChannelMainActivity.class);
+            entries.add(entry);
+        }
 
         data.setContent(entries);
         navigationDataList.add(data);
     }
 
-    // JetPack
+    // JetPack组件
     {
         NavigationListData data = new NavigationListData();
-        data.setTitle("JetPack");
+        data.setTitle("JetPack组件");
         List<NavigationListData.Entry> entries = new ArrayList<>();
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
@@ -430,17 +299,174 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // FrameWork
+    // 图形系统
     {
         NavigationListData data = new NavigationListData();
-        data.setTitle("FrameWork");
+        data.setTitle("Android图形系统");
         List<NavigationListData.Entry> entries = new ArrayList<>();
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("PermissionsDispatcher");
-            entry.setPath(PermissionAy.class);
+            entry.setContent("🚀Android图形系统");
+            entry.setPath(UIViewSystemActivity.class);
             entries.add(entry);
         }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 事件系统
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("Android事件系统");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("🚀Android事件系统");
+            entry.setPath(UICusEventActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("事件处理工具类");
+            entry.setPath(UICusEventUtilActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("嵌套滑动");
+            entry.setPath(UICusEventNestActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("多点触控");
+            entry.setPath(EventMultiTouchMainActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 自定义View
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("自定义控件");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("学习系列🚀🚀");
+            entry.setPath(UICusStudyActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("过渡与动画学习");
+            entry.setPath(UICusAnimActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("开发demo");
+            entry.setPath(UICusDemoMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("基础案例");
+            entry.setPath(UICusSamplesActivity.class);
+            entries.add(entry);
+        }
+
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("日历");
+            entry.setPath(CalendarAy.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 控件
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("基础控件");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("MaterialDesign");
+            entry.setPath(MaterialDesignMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("PopupWindow");
+            entry.setPath(PopupWindowAy.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("ViewPager2&TabLayout");
+            entry.setPath(UIViewPager2MainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("RecyclerView");
+            entry.setPath(UIRecyclerViewMainActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // Java
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("Java");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("并发编程");
+            entry.setPath(JavaJucActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("IO");
+            entry.setPath(JavaIOActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("JMM");
+            entry.setPath(JavaMMActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 网络编程
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("网络编程");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("Okhttp");
+            entry.setPath(OkHttpMainActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 框架
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("框架");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("网络框架");
@@ -478,66 +504,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // 第三方UI
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("第三方UI");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("BasePopup");
-            entry.setPath(UITBasePopupMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("PickerView");
-            entry.setPath(UITPickerViewMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("万能RecyclerViewAdapter");
-            entry.setPath(UITBaseRecyclerViewHolderMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("超级图标AAChart");
-            entry.setPath(AAChartCoreMainActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
-    // 第三方
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("第三方");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("高德地图");
-            entry.setPath(AmapActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("融云");
-            entry.setPath(ImActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("PictureSelector");
-            entry.setPath(ThirdPictureSelectorMainActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
     // 示例demo
     {
         NavigationListData data = new NavigationListData();
@@ -547,6 +513,18 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("简易画廊");
             entry.setPath(GalleryMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("图片标注");
+            entry.setPath(PhotoTagMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("加载超大图");
+            entry.setPath(LargePhotoMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);
@@ -560,14 +538,14 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         List<NavigationListData.Entry> entries = new ArrayList<>();
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("状态栏适配");
-            entry.setPath(StatusBarAy.class);
+            entry.setContent("ADB");
+            entry.setPath(ADBActivity.class);
             entries.add(entry);
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("zxing");
-            entry.setPath(ZXingDemoAy.class);
+            entry.setContent("状态栏适配");
+            entry.setPath(StatusBarAy.class);
             entries.add(entry);
         }
         {
@@ -580,12 +558,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("git");
             entry.setPath(UtilsActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("bugly");
-            entry.setPath(OtherBuglyActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);

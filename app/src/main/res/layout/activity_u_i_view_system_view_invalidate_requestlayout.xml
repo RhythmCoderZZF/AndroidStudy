@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.android_study.ui.viewSystem.view_invalidate_requestLayout.TestView
+        android:id="@+id/view"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:background="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/btnRequestLayout"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:background="@color/deep_red" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnInvalidate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="invalidate" />-->
+</LinearLayout>

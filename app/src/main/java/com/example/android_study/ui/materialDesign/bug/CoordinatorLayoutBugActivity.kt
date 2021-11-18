@@ -11,10 +11,9 @@ import com.example.android_study._base.adapter.BaseDataAdapter
 import com.example.android_study._base.adapter.BaseViewHolder
 import com.example.android_study.databinding.ItemImageBinding
 import kotlinx.android.synthetic.main.activity_coordinator_bug_layout.*
-import kotlinx.android.synthetic.main.activity_coordinator_layout.*
 
 class CoordinatorLayoutBugActivity : BaseActivity() {
-    override fun getLayoutId() = R.layout.activity_coordinator_bug_layout1
+    override fun getLayoutId() = R.layout.activity_coordinator_bug_layout
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
         viewPager.adapter = ImageAdapter().apply {

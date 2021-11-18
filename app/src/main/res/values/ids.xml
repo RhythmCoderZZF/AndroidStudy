@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="point" type="id" />
+    <item name="animate" type="id" />
+</resources>

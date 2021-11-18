@@ -11,7 +11,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <com.example.android_study.ui_custom.study._demo.loading_image.LoadingImgView
+        <com.example.android_study.ui_custom.demo.standard.loading_image.LoadingImgView
             android:id="@+id/vLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

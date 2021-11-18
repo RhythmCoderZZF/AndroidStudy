@@ -2,6 +2,7 @@ package com.example.android_study._base.cmd;
 
 import android.app.AlertDialog;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -59,7 +60,7 @@ public class CmdUtil {
 
     public static void connectCmd(AppCompatActivity activity) {
         if (RomUtils.checkFloatWindowPermission(activity)) {
-            activity.bindService(new Intent(activity, FloatViewService.class), floatLogConnection, activity.BIND_AUTO_CREATE);
+            activity.bindService(new Intent(activity, FloatViewService.class), floatLogConnection, Context.BIND_AUTO_CREATE);
         } else {
             overlayPermissionRequest(activity);
         }

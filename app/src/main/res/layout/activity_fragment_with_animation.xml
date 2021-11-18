@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.animator过场动画" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_add_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加Fragment" />
+
+            <Button
+                android:id="@+id/btn_remove_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="移除Fragment" />
+
+            <Button
+                android:id="@+id/btn_pop_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹出Fragment" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.Transition过场动画" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_add_fragment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加Fragment" />
+
+            <Button
+                android:id="@+id/btn_remove_fragment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="移除Fragment" />
+
+            <Button
+                android:id="@+id/btn_pop_fragment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹出Fragment" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider14"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.共享元素过渡" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+</ScrollView>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android_study.ui_custom.study._demo.region_anim.RegionAnimView
+    <com.example.android_study.ui_custom.demo.standard.region_anim.RegionAnimView
         android:id="@+id/vRegion"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

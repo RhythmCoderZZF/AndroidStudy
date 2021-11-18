@@ -1,7 +1,6 @@
 package com.example.android_study.ui_custom.anim.transition.fragments
 
 import android.os.Bundle
-import android.system.Os
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.android_study.ui_custom.event_util.ViewDragHelper.scroll.ViewDragHelperReleaseView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.android_study.event_system.event_util.ViewDragHelper.scroll.ViewDragHelperReleaseView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -20,4 +20,4 @@
         android:background="@color/deep_red"
         android:gravity="center"
         android:text="大力拖拽我试试" />
-</com.example.android_study.ui_custom.event_util.ViewDragHelper.scroll.ViewDragHelperReleaseView>
+</com.example.android_study.event_system.event_util.ViewDragHelper.scroll.ViewDragHelperReleaseView>

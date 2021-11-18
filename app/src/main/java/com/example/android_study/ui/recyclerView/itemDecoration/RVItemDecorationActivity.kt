@@ -4,8 +4,8 @@ import android.os.Bundle
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.adapter.EntryF
-import com.example.android_study.ui.recyclerView.itemDecoration.fragments.ItemDecorationFragment
-import com.example.android_study.ui.recyclerView.layoutManager.fragments.CustomLayoutManagerFragment
+import com.example.android_study.ui.recyclerView.itemDecoration.itemDecoration_meet.ItemDecorationFragment
+import com.example.android_study.ui.recyclerView.itemDecoration.itemDecoration_simple.ItemDecorationSimpleFragment
 
 class RVItemDecorationActivity : BaseActivity() {
 
@@ -13,7 +13,8 @@ class RVItemDecorationActivity : BaseActivity() {
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
         setViewPagerFragment(window, listOf(
-              EntryF("1.自定义ItemDecoration", ItemDecorationFragment())
+              EntryF("1.初识ItemDecoration", ItemDecorationFragment()),
+              EntryF("2.ItemDecoration小案例", ItemDecorationSimpleFragment()),
         ))
     }
 }

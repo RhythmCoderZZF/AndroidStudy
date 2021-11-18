@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
-import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,16 +17,12 @@ import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.internal.addHeaderLenient
 import okio.BufferedSink
-import org.android.agoo.common.CallBack
-import java.io.BufferedInputStream
-import java.io.BufferedOutputStream
+//import org.android.agoo.common.CallBack
 import java.io.File
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 import kotlin.concurrent.thread
-import kotlin.math.sin
 
 /**
  * Author:create by RhythmCoder

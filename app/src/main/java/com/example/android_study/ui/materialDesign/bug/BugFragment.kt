@@ -1,14 +1,12 @@
 package com.example.android_study.ui.materialDesign.bug
 
 import android.os.Bundle
-import android.os.RecoverySystem
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_study.R
 import com.example.android_study._base.BaseFragment
-import com.example.android_study._base.adapter.RvAdapter
 import com.example.android_study.ui.recyclerView.gesture.adapter.GestureRvAdapter
 
 /**

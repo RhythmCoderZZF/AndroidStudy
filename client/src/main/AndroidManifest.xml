@@ -2,14 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.client">
 
-<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.Android_Study">
         <activity android:name="com.example.client.MainActivity">
             <intent-filter>
@@ -22,6 +22,26 @@
         <activity android:name=".android.ipc.AndroidIPCMainActivity" />
         <activity android:name=".android.ipc.messenger.MessengerActivity" />
         <activity android:name=".android.ipc.binder.BinderActivity" />
+        <activity
+            android:name=".android.activity.singleTask.AndroidSingleTaskActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="app.intent.test.singleTask" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".android.activity.AndroidActivity"
+            android:launchMode="standard"/>
+        <activity android:name=".android.activity.standerd.AndroidStandardActivity" />
+        <activity
+            android:name=".android.activity.singleInstance.AndroidSingleInstanceActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="app.intent.test.singleInstance" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

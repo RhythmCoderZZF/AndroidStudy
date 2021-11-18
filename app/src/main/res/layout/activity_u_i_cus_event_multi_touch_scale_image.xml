@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.android_study.event_system.multi_touch.scale_image.ScaleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="matrix"
+    android:src="@drawable/bg_clear_day">
+
+</com.example.android_study.event_system.multi_touch.scale_image.ScaleImageView>

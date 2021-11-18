@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver
 import androidx.lifecycle.lifecycleScope
 import com.example.android_study.R
 import com.example.android_study._base.BaseFragment

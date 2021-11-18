@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
-import com.amap.api.mapcore.util.lb
 
 /**
  * Author:create by RhythmCoder

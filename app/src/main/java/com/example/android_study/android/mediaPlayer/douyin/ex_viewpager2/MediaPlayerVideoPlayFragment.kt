@@ -11,7 +11,9 @@ import kotlinx.android.synthetic.main.fragment_media_player_video_play.*
 import kotlinx.coroutines.delay
 
 
-class MediaPlayerVideoPlayFragment(private val position: Int, private val url: String) : BaseFragment() {
+class MediaPlayerVideoPlayFragment(private val position: Int, private val url: String) : BaseFragment(
+
+) {
     override val TAG: String
         get() = "$position:"
     private var mediaPlayer: MediaPlayer? = null
@@ -41,14 +43,14 @@ class MediaPlayerVideoPlayFragment(private val position: Int, private val url: S
             loading.visibility = View.VISIBLE
         }
         surfaceView.holder.addCallback(object : SurfaceHolder.Callback {
-            override fun surfaceCreated(holder: SurfaceHolder?) {
+            override fun surfaceCreated(holder: SurfaceHolder) {
                 mediaPlayer?.setDisplay(holder)
             }
 
-            override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+            override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
             }
 
-            override fun surfaceDestroyed(holder: SurfaceHolder?) {
+            override fun surfaceDestroyed(holder: SurfaceHolder) {
             }
         })
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.不服用（每次点击创建图片显示）" />
+
+    <ImageView
+        android:id="@+id/ivNoReuse"
+        android:layout_width="300dp"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/btnNoReuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建并显示"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.复用（每次点击创建的图片用的时是老的Bitmap内存）" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="300dp"
+        android:layout_height="200dp" />
+    <ImageView
+        android:id="@+id/ivReuse"
+        android:layout_width="300dp"
+        android:layout_height="200dp" />
+    <Button
+        android:id="@+id/btnReuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建并显示"/>
+
+
+
+
+</LinearLayout>

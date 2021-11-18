@@ -99,6 +99,11 @@ abstract class BaseActivity : AppCompatActivity(), CoroutineScope by MainScope()
         if (showLifecycle) CmdUtil.v("onStart")
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        if (showLifecycle) CmdUtil.v("onNewIntent")
+    }
+
     override fun onResume() {
         super.onResume()
         LogUtil.v("topActivity", this.javaClass.simpleName)
@@ -153,9 +158,9 @@ abstract class BaseActivity : AppCompatActivity(), CoroutineScope by MainScope()
         rv.adapter = RvAdapter(list)
     }
 
-    protected fun setViewPagerFragment(root:Window, list: List<EntryF>) {
-        val viewPager=root.findViewById<ViewPager2>(R.id.viewPager)
-        val tabLayout=root.findViewById<TabLayout>(R.id.tabLayout)
+    protected fun setViewPagerFragment(root: Window, list: List<EntryF>) {
+        val viewPager = root.findViewById<ViewPager2>(R.id.viewPager)
+        val tabLayout = root.findViewById<TabLayout>(R.id.tabLayout)
         viewPager.apply {
             adapter = object : FragmentStateAdapter(this@BaseActivity) {
                 override fun getItemCount() = list.size
@@ -166,20 +171,20 @@ abstract class BaseActivity : AppCompatActivity(), CoroutineScope by MainScope()
         }
 
         TabLayoutMediator(tabLayout, viewPager) { tab: TabLayout.Tab, i: Int ->
-            tab.text=list[i].title
+            tab.text = list[i].title
         }.attach()
     }
 
 
     fun showLoading(show: Boolean, text: String = "正在加载...") {
         loadingDialog = loadingDialog ?: QuickPopupBuilder.with(this)
-                .contentView(R.layout.layout_loading)
-                .config(
-                        QuickPopupConfig()
-                                .backgroundColor(Color.TRANSPARENT)
-                                .backpressEnable(true)
-                )
-                .build()
+            .contentView(R.layout.layout_loading)
+            .config(
+                QuickPopupConfig()
+                    .backgroundColor(Color.TRANSPARENT)
+                    .backpressEnable(true)
+            )
+            .build()
         if (show) {
             if (loadingDialog!!.isShowing)
                 return

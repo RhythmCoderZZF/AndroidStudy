@@ -6,11 +6,7 @@ import android.widget.ImageView
 import androidx.core.content.res.ResourcesCompat
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
-import com.example.android_study._base.adapter.Entry
-import com.example.android_study.android.fragment._lifecycle.FragmentDemoAy
-import com.example.android_study.android.fragment.fragmentManager.FragmentManagerActivity
 import kotlinx.android.synthetic.main.activity_android_drawable_transition.*
-import kotlinx.android.synthetic.main.activity_fragment_main.*
 
 class AndroidTransitionDrawableActivity : BaseActivity() {
 

@@ -1,17 +1,13 @@
 package com.example.android_study.android.mediaPlayer.douyin.jz_viewpager2
 
 import android.os.Bundle
-import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import cn.jzvd.Jzvd
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
-import com.example.android_study._base.adapter.BaseViewHolder
 import com.example.android_study._base.cmd.CmdUtil
-import com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview.JzvdStdTikTokPlayer
 import com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview.TikTokRecyclerViewAdapter
-import com.example.android_study.databinding.ItemMediaDouyinGsyBinding
 import kotlinx.android.synthetic.main.activity_gsy_view_pager2.*
 import kotlinx.android.synthetic.main.activity_media_player_dou_yin_view_pager2.*
 import kotlinx.android.synthetic.main.activity_media_player_dou_yin_view_pager2.viewPager

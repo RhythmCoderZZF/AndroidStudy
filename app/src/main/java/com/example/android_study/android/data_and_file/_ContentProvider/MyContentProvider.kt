@@ -6,7 +6,7 @@ import android.content.ContentValues
 import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
-import com.example.android_study.android._database._sqlLite.db.MyDatabaseHelper
+import com.example.android_study.android.database.sqlLite.db.MyDatabaseHelper
 
 /**
  * Author:create by RhythmCoder
