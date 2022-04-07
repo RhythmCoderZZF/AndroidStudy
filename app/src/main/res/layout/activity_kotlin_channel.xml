@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《基础》" />
+
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《迭代》" />
+
+            <Button
+                android:id="@+id/btn_iterator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《分类》" />
+
+            <Button
+                android:id="@+id/btn_rendezvous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rendezvous(默认)" />
+
+            <Button
+                android:id="@+id/btn_unlimited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="unlimited" />
+
+            <Button
+                android:id="@+id/btn_conflated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="conflated" />
+
+            <Button
+                android:id="@+id/btn_buffered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="buffered" />
+
+            <Button
+                android:id="@+id/btn_fixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fixed" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《Channel的关闭》" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭Channel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《使用produce快捷构建一个生产者Channel》" />
+
+            <Button
+                android:id="@+id/btn_produce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="produce" />
+
+            <Button
+                android:id="@+id/btn_actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="actor" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《BroadcastChannel》" />
+
+            <Button
+                android:id="@+id/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通Channel" />
+
+            <Button
+                android:id="@+id/btn_broadcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BroadCastChannel" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

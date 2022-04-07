@@ -2,7 +2,10 @@ package com.example.android_study._base
 
 import android.app.Application
 import android.graphics.Color
+import android.os.Handler
+import android.os.Looper
 import android.view.Choreographer
+import android.widget.Toast
 import com.example.android_study._base.cmd.CmdUtil
 import com.example.android_study._base.util.LogUtil
 
@@ -16,11 +19,15 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        val startTime=System.currentTimeMillis()
+        val startTime = System.currentTimeMillis()
         initFPS()
         instance = this
-        LogUtil.d("","${System.currentTimeMillis()-startTime}")
+        LogUtil.d("", "${System.currentTimeMillis() - startTime}")
+
+        //永不崩溃
+//        initCrashHandler()
     }
+
     /**
      * 实时获取UI线程的fps
      */
@@ -54,6 +61,24 @@ class App : Application() {
                 Choreographer.getInstance().postFrameCallback(this)
             }
         })
+    }
+
+    private fun initCrashHandler() {
+        Handler(Looper.getMainLooper()).postAtFrontOfQueue {
+            while (true) {
+                try {
+                    Looper.loop()
+                } catch (e: Exception) {
+                    Thread.getDefaultUncaughtExceptionHandler()
+                        ?.uncaughtException(Thread.currentThread(), e)
+                }
+            }
+        }
+        Thread.setDefaultUncaughtExceptionHandler { t, e ->
+            Handler(Looper.getMainLooper()).postAtFrontOfQueue {
+                Toast.makeText(applicationContext, "错误:${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     companion object {

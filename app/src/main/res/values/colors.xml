@@ -58,7 +58,7 @@
     <!--Float Service-->
     <color name="transparent_white">#AAffffff</color>
     <color name="transparent_green">#AA3fc75f</color>
-    <color name="transparent_red">#AAf9382a</color>
+    <color name="transparent_red">#FF1631</color>
 
     <!--Calendar View-->
     <color name="color_green3">#14E3CF</color>

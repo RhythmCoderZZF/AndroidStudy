@@ -18,7 +18,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
         CmdUtil.showWindow()
-        //**1. 过渡操作符**
+        //---1. 过渡操作符
         btnMap.setOnClickListener {
             //map
             launch {
@@ -46,7 +46,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
             }
         }
 
-        //**2. 转换操作符**
+        //---2. 转换操作符
         btnTransform.setOnClickListener {
             //transform
             launch {
@@ -60,7 +60,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
                     }
             }
         }
-        //**3. 限长操作符**
+        //---3. 限长操作符**
         btnTake.setOnClickListener {
             //take
             launch {
@@ -96,7 +96,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
                     }
             }
         }
-        //**4. 末端操作符**
+        //---4. 末端操作符**
         btnReduce.setOnClickListener {
             //reduce
             launch {
@@ -133,7 +133,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
                 CmdUtil.v("result:$result")
             }
         }
-        //**5. FlowOn操作符**
+        //---5. FlowOn操作符**
         btnFlowOn.setOnClickListener {
             //toList
             launch {
@@ -152,7 +152,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
                     }
             }
         }
-        //**6. 组合多个流**
+        //---6. 组合多个流
         btnZip.setOnClickListener {
             //zip
             launch {
@@ -186,7 +186,7 @@ class KotlinFlowOperatorMainActivity : BaseActivity() {
                 CmdUtil.i("合并两个流,元素交错对应")
             }
         }
-        //**6. 展平流——————————**
+        //---7. 展平流
         btnFlowNest.setOnClickListener {
             //嵌套Flow
             launch {

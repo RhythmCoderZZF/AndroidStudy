@@ -26,6 +26,7 @@ import com.example.android_study.android.drawable_and_graph.AndroidDrawableGraph
 import com.example.android_study.android.ipc.IPCMainActivity;
 import com.example.android_study.android.location.AndroidLocationManagerMainActivity;
 import com.example.android_study.android.wifi.WifiMainActivity;
+import com.example.android_study.design.DesignMainActivity;
 import com.example.android_study.event_system.multi_touch.EventMultiTouchMainActivity;
 import com.example.android_study.framework.glide.FWGlideAy;
 import com.example.android_study.jetpack.camera.CameraXMainActivity;
@@ -43,18 +44,19 @@ import com.example.android_study.jetpack.navigation.NavigationTestActivity;
 import com.example.android_study.jetpack.paging3.PagingAy;
 import com.example.android_study.jetpack.room.RoomAy;
 import com.example.android_study.jetpack.viewmodel.JetpackViewModelMainActivity;
-import com.example.android_study.kotlin._1_base.KotlinBaseMainActivity;
+import com.example.android_study.kotlin.base.KotlinBaseMainActivity;
 import com.example.android_study.kotlin.channel.KotlinChannelMainActivity;
 import com.example.android_study.kotlin.collection.CollectionMainActivity;
-import com.example.android_study.kotlin._2_coroutine.CoroutinesAy;
-import com.example.android_study.kotlin.coroutine_core.CoroutineCoreActivity;
+import com.example.android_study.kotlin.coroutine.CoroutinesAy;
 import com.example.android_study.kotlin.flow.KotlinFlowMainActivity;
+import com.example.android_study.kotlin.select.KotlinSelectMainActivity;
 import com.example.android_study.network.okhttp.OkHttpMainActivity;
 import com.example.android_study.other.adb.ADBActivity;
 import com.example.android_study.other.status_bar.common.StatusBarAy;
 import com.example.android_study.other.utils.UtilsActivity;
-import com.example.android_study.performance_optimization.LeakCanaryAy;
-import com.example.android_study.performance_optimization.POMemoryMainActivity;
+import com.example.android_study.performance.crash.PerformanceCrashActivity;
+import com.example.android_study.performance.layout.PerformanceLayoutActivity;
+import com.example.android_study.performance.memory.PerformanceMemoryLeakAy;
 import com.example.android_study.samples.gallery.GalleryMainActivity;
 import com.example.android_study.samples.largePhoto.LargePhotoMainActivity;
 import com.example.android_study.samples.photoTag.PhotoTagMainActivity;
@@ -177,7 +179,7 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // Kotlin
+    // #Kotlin
     {
         NavigationListData data = new NavigationListData();
         data.setTitle("Kotlin");
@@ -202,20 +204,20 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("协程核心");
-            entry.setPath(CoroutineCoreActivity.class);
+            entry.setContent("Channnel");
+            entry.setPath(KotlinChannelMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("Select");
+            entry.setPath(KotlinSelectMainActivity.class);
             entries.add(entry);
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("Flow");
             entry.setPath(KotlinFlowMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("Channnel");
-            entry.setPath(KotlinChannelMainActivity.class);
             entries.add(entry);
         }
 
@@ -491,13 +493,34 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("内存泄漏");
-            entry.setPath(LeakCanaryAy.class);
+            entry.setPath(PerformanceMemoryLeakAy.class);
             entries.add(entry);
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("内存");
-            entry.setPath(POMemoryMainActivity.class);
+            entry.setContent("异常崩溃");
+            entry.setPath(PerformanceCrashActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("布局优化");
+            entry.setPath(PerformanceLayoutActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 设计模式
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("设计模式");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("设计模式大全");
+            entry.setPath(DesignMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);
@@ -712,6 +735,5 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
     public void onClick(Class path) {
         startActivity(new Intent(this, path));
     }
-
 
 }

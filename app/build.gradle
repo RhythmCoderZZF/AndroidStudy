@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.android_study"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -70,7 +70,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //**base
+    //——————————————Base——————————————
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'q.rorbin:VerticalTabLayout:1.2.5'
     implementation 'com.hyman:flowlayout-lib:1.1.2'
@@ -78,7 +78,7 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'//BaseRecyclerViewHolder
     implementation 'com.github.razerdp:BasePopup:2.2.8'
 
-    //**JetPack
+    //——————————————JetPack——————————————
     def lifecycle_extensions = "2.2.0"
     def lifecycle_version = "2.3.1"
     def paging_version = "3.0.0-alpha09"
@@ -99,14 +99,14 @@ dependencies {
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
     implementation "androidx.paging:paging-common-ktx:$paging_version"
 
-    //**kotlin
+    //——————————————Kotlin——————————————
     implementation "androidx.core:core-ktx:1.6.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'        //协程
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'        //协程
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
 
-    //**test
+    //——————————————Test——————————————
     androidTestImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     testImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -114,7 +114,7 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
 
-    //**cameraX
+    //——————————————CameraX——————————————
     def camerax_version = "1.1.0-alpha08"
     // CameraX core library using camera2 implementation
     implementation "androidx.camera:camera-core:$camerax_version"
@@ -126,7 +126,7 @@ dependencies {
     // If you want to additionally use the CameraX Extensions library
     implementation "androidx.camera:camera-extensions:1.0.0-alpha20"
 
-    //**ui
+    //——————————————UI——————————————
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
     implementation 'com.google.android.material:material:1.3.0-alpha03'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
@@ -134,11 +134,12 @@ dependencies {
     implementation 'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
     implementation 'com.github.zhpanvip:BannerViewPager:3.2.0'//banner
 //    implementation 'com.contrarywind:Android-PickerView:4.1.9'
-    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0' //pictureselector框架使用了该框架
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    //pictureselector框架使用了该框架
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 
 
-    //**framework
+    //——————————————Framework——————————————
     implementation 'com.jakewharton:butterknife:10.2.1'
     kapt 'com.jakewharton:butterknife-compiler:10.2.1'
     implementation "org.permissionsdispatcher:permissionsdispatcher:4.8.0"      //权限
@@ -147,11 +148,11 @@ dependencies {
     implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 
-    //Glide
+    //——————————————Glide——————————————
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
 
-//    //音视频
+    //——————————————MediaPlayer——————————————
     implementation('com.shuyu:GSYVideoPlayer:8.0.0')
     implementation 'cn.jzvd:jiaozivideoplayer:7.6.0'
     implementation 'com.google.android.exoplayer:exoplayer:2.12.1'//exoplayer
