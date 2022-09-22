@@ -24,6 +24,9 @@
     <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
     <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission
         android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions" />
@@ -324,6 +327,12 @@
         <activity android:name=".performance.layout.PerformanceLayoutActivity" />
         <activity android:name=".design._1_Singleton.DesignSingletonActivity" />
         <activity android:name=".design.DesignMainActivity" />
+        <activity android:name=".android.notification.NotificationMainActivity" />
+        <activity android:name=".android.notification.NotificationActivity" />
+        <activity android:name=".performance.power.PerformancePowerMainActivity" />
+        <activity android:name=".performance.power.wakelock.WakelockAy" />
+        <activity android:name=".android.bluetooth.AndroidBluetoothMainActivity" />
+        <activity android:name=".android.bluetooth.BluetoothApiActivity" />
 
         <provider
             android:name=".android.data_and_file._ContentProvider.MyContentProvider"

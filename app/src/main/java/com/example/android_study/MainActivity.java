@@ -19,7 +19,9 @@ import com.example.android_study._base.NavigationAdapter;
 import com.example.android_study._base.NavigationListData;
 import com.example.android_study._base.util.ToolbarHelper;
 import com.example.android_study.android.activity.AndroidActivity;
+import com.example.android_study.android.bluetooth.AndroidBluetoothMainActivity;
 import com.example.android_study.android.database.MainDataBaseAy;
+import com.example.android_study.android.notification.NotificationMainActivity;
 import com.example.android_study.android.webview.AndroidWebViewMainActivity;
 import com.example.android_study.android.data_and_file.AndroidDataAndFileMainActivity;
 import com.example.android_study.android.drawable_and_graph.AndroidDrawableGraphMainActivity;
@@ -57,6 +59,7 @@ import com.example.android_study.other.utils.UtilsActivity;
 import com.example.android_study.performance.crash.PerformanceCrashActivity;
 import com.example.android_study.performance.layout.PerformanceLayoutActivity;
 import com.example.android_study.performance.memory.PerformanceMemoryLeakAy;
+import com.example.android_study.performance.power.PerformancePowerMainActivity;
 import com.example.android_study.samples.gallery.GalleryMainActivity;
 import com.example.android_study.samples.largePhoto.LargePhotoMainActivity;
 import com.example.android_study.samples.photoTag.PhotoTagMainActivity;
@@ -173,6 +176,18 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("Location");
             entry.setPath(AndroidLocationManagerMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("通知");
+            entry.setPath(NotificationMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("蓝牙");
+            entry.setPath(AndroidBluetoothMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);
@@ -506,6 +521,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("布局优化");
             entry.setPath(PerformanceLayoutActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("功耗优化");
+            entry.setPath(PerformancePowerMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);
