@@ -19,6 +19,7 @@ import com.example.android_study._base.NavigationAdapter;
 import com.example.android_study._base.NavigationListData;
 import com.example.android_study._base.util.ToolbarHelper;
 import com.example.android_study.android.activity.AndroidActivity;
+import com.example.android_study.android.audio.AndroidAudioMainActivity;
 import com.example.android_study.android.bluetooth.AndroidBluetoothMainActivity;
 import com.example.android_study.android.database.MainDataBaseAy;
 import com.example.android_study.android.notification.NotificationMainActivity;
@@ -188,6 +189,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("蓝牙");
             entry.setPath(AndroidBluetoothMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("音频");
+            entry.setPath(AndroidAudioMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);

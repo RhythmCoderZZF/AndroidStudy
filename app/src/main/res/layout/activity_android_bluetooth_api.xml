@@ -29,4 +29,9 @@
         android:layout_height="wrap_content"
         android:text="getConnectionState"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*通过断开、连接蓝牙点击获取蓝牙连接状态*"/>
+
 </LinearLayout>

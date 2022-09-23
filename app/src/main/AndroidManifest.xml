@@ -333,6 +333,8 @@
         <activity android:name=".performance.power.wakelock.WakelockAy" />
         <activity android:name=".android.bluetooth.AndroidBluetoothMainActivity" />
         <activity android:name=".android.bluetooth.BluetoothApiActivity" />
+        <activity android:name=".android.audio.AndroidAudioMainActivity" />
+        <activity android:name=".android.audio.AudioApiActivity" />
 
         <provider
             android:name=".android.data_and_file._ContentProvider.MyContentProvider"
