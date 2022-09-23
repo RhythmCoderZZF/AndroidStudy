@@ -1,8 +1,8 @@
 package com.example.android_study.android.bluetooth
 
 import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothAdapter.*
 import android.bluetooth.BluetoothDevice
-import android.bluetooth.BluetoothProfile
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -12,9 +12,12 @@ import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.cmd.CmdUtil
 import kotlinx.android.synthetic.main.activity_android_bluetooth_api.*
+import java.lang.reflect.Method
 
 class BluetoothApiActivity : BaseActivity() {
     private val mReceiver = BTReceiver()
+    private val mBTAdapter = BluetoothAdapter.getDefaultAdapter()
+
 
     private class BTReceiver : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -65,6 +68,35 @@ class BluetoothApiActivity : BaseActivity() {
                 registerReceiver(mReceiver, filter)
             } else {
                 unregisterReceiver(mReceiver)
+            }
+        }
+
+        btn_get_connect_state.setOnClickListener {
+            try {
+                val method: Method = BluetoothAdapter::class.java.getDeclaredMethod(
+                    "getConnectionState",
+                )
+                method.isAccessible = true
+                val stateStr = when (method.invoke(mBTAdapter) as Int) {
+                    STATE_DISCONNECTED -> {
+                        "STATE_DISCONNECTED"
+                    }
+                    STATE_CONNECTING -> {
+                        "STATE_CONNECTING"
+                    }
+                    STATE_CONNECTED -> {
+                        "STATE_CONNECTED"
+                    }
+                    STATE_DISCONNECTING -> {
+                        "STATE_DISCONNECTING"
+                    }
+                    else -> {
+                        "-1"
+                    }
+                }
+                CmdUtil.v("$stateStr")
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
         }
     }

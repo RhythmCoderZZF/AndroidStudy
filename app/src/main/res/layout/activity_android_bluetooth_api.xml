@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1.监听蓝牙连接断开"/>
+        android:text="1.监听广播"/>
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/btn_register"
@@ -16,4 +16,17 @@
         android:textSize="16sp"
         android:textColor="@android:color/black"
         android:text="注册广播     "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="2.API"/>
+
+    <Button
+        android:id="@+id/btn_get_connect_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="getConnectionState"/>
+
 </LinearLayout>
