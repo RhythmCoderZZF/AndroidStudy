@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'     //apt框架根据注解生成代码(使用kapt就不要用annotationProcessor)
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 30
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.android_study"
@@ -158,5 +158,5 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer:2.12.1'//exoplayer
 
     //——————————————Preference——————————————
-    implementation 'androidx.preference:preference:1.2.0'
+//    implementation 'androidx.preference:preference:1.2.0'
 }

@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'     //apt框架根据注解生成代码(使用kapt�
 
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
