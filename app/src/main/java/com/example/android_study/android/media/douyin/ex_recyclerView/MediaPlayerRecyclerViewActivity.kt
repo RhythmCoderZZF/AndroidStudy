@@ -1,8 +1,7 @@
-package com.example.android_study.android.mediaPlayer.douyin.ex_recyclerView
+package com.example.android_study.android.media.douyin.ex_recyclerView
 
 import android.media.MediaPlayer
 import android.os.Bundle
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +11,6 @@ import com.example.android_study._base.adapter.BaseViewHolder
 import com.example.android_study._base.cmd.CmdUtil
 import kotlinx.android.synthetic.main.activity_media_player_recycler_view.*
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
 
 class MediaPlayerRecyclerViewActivity : BaseActivity() {
     private val mAdapter = VideoPageAdapter()

@@ -1,9 +1,6 @@
-package com.example.android_study.android.mediaPlayer.douyin.ex_viewpager2
+package com.example.android_study.android.media.douyin.ex_viewpager2
 
 import android.os.Bundle
-import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.SnapHelper
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity

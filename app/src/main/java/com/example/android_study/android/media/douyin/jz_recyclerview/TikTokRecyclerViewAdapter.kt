@@ -1,8 +1,7 @@
-package com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview
+package com.example.android_study.android.media.douyin.jz_recyclerview
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +10,8 @@ import cn.jzvd.JZDataSource
 import cn.jzvd.Jzvd
 import com.example.android_study.R
 import com.example.android_study._base.cmd.CmdUtil
-import com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview.TikTokRecyclerViewAdapter.TikTokVH
-import com.example.android_study.android.mediaPlayer.videoList
+import com.example.android_study.android.media.douyin.jz_recyclerview.TikTokRecyclerViewAdapter.TikTokVH
+import com.example.android_study.android.media.videoList
 
 class TikTokRecyclerViewAdapter(private val context: Context) : RecyclerView.Adapter<TikTokVH>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TikTokVH {

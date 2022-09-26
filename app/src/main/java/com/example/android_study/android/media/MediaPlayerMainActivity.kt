@@ -1,17 +1,17 @@
-package com.example.android_study.android.mediaPlayer
+package com.example.android_study.android.media
 
 import android.os.Bundle
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.adapter.Entry
 import com.example.android_study._base.cmd.CmdUtil
-import com.example.android_study.android.mediaPlayer.douyin.ex_viewpager2.MediaPlayerViewPager2Activity
-import com.example.android_study.android.mediaPlayer.douyin.gsy_viewpager2.GsyViewPager2Activity
-import com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview.JzTikTokActivity
-import com.example.android_study.android.mediaPlayer.douyin.jz_viewpager2.JzTikTokViewPager2Activity
-import com.example.android_study.android.mediaPlayer.custom_mediaplayer.MediaPlayerCustomActivity
-import com.example.android_study.android.mediaPlayer.douyin.ex_recyclerView.MediaPlayerRecyclerViewActivity
-import com.example.android_study.android.mediaPlayer.simple.MediaPlayerSimpleActivity
+import com.example.android_study.android.media.douyin.ex_viewpager2.MediaPlayerViewPager2Activity
+import com.example.android_study.android.media.douyin.gsy_viewpager2.GsyViewPager2Activity
+import com.example.android_study.android.media.douyin.jz_recyclerview.JzTikTokActivity
+import com.example.android_study.android.media.douyin.jz_viewpager2.JzTikTokViewPager2Activity
+import com.example.android_study.android.media.custom_mediaplayer.MediaPlayerCustomActivity
+import com.example.android_study.android.media.douyin.ex_recyclerView.MediaPlayerRecyclerViewActivity
+import com.example.android_study.android.media.simple.MediaPlayerSimpleActivity
 import kotlinx.android.synthetic.main.activity_media_player_main.*
 
 val videoList = mutableListOf(
@@ -40,8 +40,10 @@ class MediaPlayerMainActivity : BaseActivity() {
         CmdUtil.showWindow()
         setRecyclerView(
             rv, listOf(
+                Entry("1. Audio API", AudioApiActivity::class.java, "AudioManager相关"),
                 Entry("1. VideoView播放", MediaPlayerSimpleActivity::class.java, "简单播放"),
-                Entry("2. 自定义MediaPlayer播放", MediaPlayerCustomActivity::class.java, "简单播放"),
+                Entry("2. MediaPlayer播放音频", MediaPlayerMusicActivity::class.java, "简单播放mp3"),
+                Entry("2. MediaPlayer播放视频", MediaPlayerCustomActivity::class.java, "简单播放"),
                 Entry(
                     "3. 仿抖音",
                     MediaPlayerViewPager2Activity::class.java,

@@ -6,4 +6,4 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".android.mediaPlayer.douyin.jz_viewpager2.JzTikTokViewPager2Activity"/>
+    tools:context=".android.media.douyin.jz_viewpager2.JzTikTokViewPager2Activity"/>

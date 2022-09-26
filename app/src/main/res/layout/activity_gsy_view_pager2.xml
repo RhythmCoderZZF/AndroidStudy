@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".android.mediaPlayer.douyin.gsy_viewpager2.GsyViewPager2Activity">
+        tools:context=".android.media.douyin.gsy_viewpager2.GsyViewPager2Activity">
 
     </androidx.viewpager2.widget.ViewPager2>
 </layout>

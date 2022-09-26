@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.custom_mediaplayer
+package com.example.android_study.android.media.custom_mediaplayer
 
 import android.media.MediaPlayer
 import androidx.lifecycle.Lifecycle

@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.douyin.jz_viewpager2
+package com.example.android_study.android.media.douyin.jz_viewpager2
 
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
@@ -7,9 +7,7 @@ import cn.jzvd.Jzvd
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.cmd.CmdUtil
-import com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview.TikTokRecyclerViewAdapter
-import kotlinx.android.synthetic.main.activity_gsy_view_pager2.*
-import kotlinx.android.synthetic.main.activity_media_player_dou_yin_view_pager2.*
+import com.example.android_study.android.media.douyin.jz_recyclerview.TikTokRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_media_player_dou_yin_view_pager2.viewPager
 
 class JzTikTokViewPager2Activity : BaseActivity() {

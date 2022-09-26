@@ -1,10 +1,9 @@
-package com.example.android_study.android.mediaPlayer.custom_mediaplayer
+package com.example.android_study.android.media.custom_mediaplayer
 
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.Gravity
 import android.view.SurfaceHolder
-import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.activity.viewModels
@@ -13,10 +12,7 @@ import com.example.android_study._base.App
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.cmd.CmdUtil
 import com.example.android_study._base.util.immersion
-import com.example.android_study._base.util.screenWidth
 import kotlinx.android.synthetic.main.activity_media_player_custom.*
-import kotlinx.android.synthetic.main.activity_media_player_simple.*
-import okhttp3.internal.wait
 
 
 class MediaPlayerCustomActivity : BaseActivity() {

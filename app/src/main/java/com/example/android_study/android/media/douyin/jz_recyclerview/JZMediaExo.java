@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview;
+package com.example.android_study.android.media.douyin.jz_recyclerview;
 
 import android.content.Context;
 import android.graphics.SurfaceTexture;

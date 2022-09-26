@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.simple
+package com.example.android_study.android.media.simple
 
 import android.os.Bundle
 import com.example.android_study.R

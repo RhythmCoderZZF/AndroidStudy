@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.douyin.jz_recyclerview;
+package com.example.android_study.android.media.douyin.jz_recyclerview;
 
 import android.os.Bundle;
 import android.view.MenuItem;

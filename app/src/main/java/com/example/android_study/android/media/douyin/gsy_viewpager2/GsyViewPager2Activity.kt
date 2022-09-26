@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.douyin.gsy_viewpager2
+package com.example.android_study.android.media.douyin.gsy_viewpager2
 
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView

@@ -5,7 +5,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".android.mediaPlayer.douyin.ex_viewpager2.MediaPlayerVideoPlayFragment">
+        tools:context=".android.media.douyin.ex_viewpager2.MediaPlayerVideoPlayFragment">
 
         <SurfaceView
             android:id="@+id/surfaceView"

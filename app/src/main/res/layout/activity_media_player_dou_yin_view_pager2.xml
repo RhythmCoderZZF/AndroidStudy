@@ -6,6 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".android.mediaPlayer.douyin.ex_viewpager2.MediaPlayerViewPager2Activity">
+    tools:context=".android.media.douyin.ex_viewpager2.MediaPlayerViewPager2Activity">
 
 </androidx.viewpager2.widget.ViewPager2>

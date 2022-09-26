@@ -19,7 +19,6 @@ import com.example.android_study._base.NavigationAdapter;
 import com.example.android_study._base.NavigationListData;
 import com.example.android_study._base.util.ToolbarHelper;
 import com.example.android_study.android.activity.AndroidActivity;
-import com.example.android_study.android.audio.AndroidAudioMainActivity;
 import com.example.android_study.android.bluetooth.AndroidBluetoothMainActivity;
 import com.example.android_study.android.database.MainDataBaseAy;
 import com.example.android_study.android.notification.NotificationMainActivity;
@@ -34,7 +33,7 @@ import com.example.android_study.event_system.multi_touch.EventMultiTouchMainAct
 import com.example.android_study.framework.glide.FWGlideAy;
 import com.example.android_study.jetpack.camera.CameraXMainActivity;
 import com.example.android_study.android.handler.HandlerMainActivity;
-import com.example.android_study.android.mediaPlayer.MediaPlayerMainActivity;
+import com.example.android_study.android.media.MediaPlayerMainActivity;
 import com.example.android_study.android.service.ServiceMainActivity;
 import com.example.android_study.framework._network.NetWorkAy;
 import com.example.android_study.jetpack.databinding.DataBindingAy;
@@ -163,7 +162,7 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("播放器");
+            entry.setContent("多媒体");
             entry.setPath(MediaPlayerMainActivity.class);
             entries.add(entry);
         }
@@ -189,12 +188,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("蓝牙");
             entry.setPath(AndroidBluetoothMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("音频");
-            entry.setPath(AndroidAudioMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);

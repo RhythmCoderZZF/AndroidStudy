@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.douyin.ex_viewpager2
+package com.example.android_study.android.media.douyin.ex_viewpager2
 
 import android.media.MediaPlayer
 import android.os.Bundle

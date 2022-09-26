@@ -1,13 +1,11 @@
-package com.example.android_study.android.mediaPlayer.douyin.gsy_viewpager2
+package com.example.android_study.android.media.douyin.gsy_viewpager2
 
-import android.view.View
 import androidx.recyclerview.widget.DiffUtil
 import com.example.android_study.R
 import com.example.android_study._base.adapter.BaseDataAdapter
 import com.example.android_study._base.adapter.BaseViewHolder
 import com.example.android_study._base.cmd.CmdUtil
 import com.example.android_study.databinding.ItemMediaDouyinGsyBinding
-import com.shuyu.gsyvideoplayer.GSYVideoManager
 import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder
 import com.shuyu.gsyvideoplayer.listener.GSYSampleCallBack
 

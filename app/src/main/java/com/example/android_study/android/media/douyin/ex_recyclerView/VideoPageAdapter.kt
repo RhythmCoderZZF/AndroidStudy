@@ -1,4 +1,4 @@
-package com.example.android_study.android.mediaPlayer.douyin.ex_recyclerView
+package com.example.android_study.android.media.douyin.ex_recyclerView
 
 import android.media.MediaPlayer
 import android.view.SurfaceHolder

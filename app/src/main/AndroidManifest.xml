@@ -77,12 +77,12 @@
         <activity android:name=".jetpack.camera.CameraXMainActivity" />
         <activity android:name=".jetpack.viewmodel.isInstance.ViewModelTestActivity" />
         <activity android:name=".jetpack.viewmodel.JetpackViewModelMainActivity" />
-        <activity android:name=".android.mediaPlayer.douyin.jz_viewpager2.JzTikTokViewPager2Activity" />
-        <activity android:name=".android.mediaPlayer.douyin.jz_recyclerview.JzTikTokActivity" />
-        <activity android:name=".android.mediaPlayer.douyin.gsy_viewpager2.GsyViewPager2Activity" />
-        <activity android:name=".android.mediaPlayer.douyin.ex_recyclerView.MediaPlayerRecyclerViewActivity" />
-        <activity android:name=".android.mediaPlayer.douyin.ex_viewpager2.MediaPlayerViewPager2Activity" />
-        <activity android:name=".android.mediaPlayer.MediaPlayerMainActivity" />
+        <activity android:name=".android.media.douyin.jz_viewpager2.JzTikTokViewPager2Activity" />
+        <activity android:name=".android.media.douyin.jz_recyclerview.JzTikTokActivity" />
+        <activity android:name=".android.media.douyin.gsy_viewpager2.GsyViewPager2Activity" />
+        <activity android:name=".android.media.douyin.ex_recyclerView.MediaPlayerRecyclerViewActivity" />
+        <activity android:name=".android.media.douyin.ex_viewpager2.MediaPlayerViewPager2Activity" />
+        <activity android:name=".android.media.MediaPlayerMainActivity" />
         <activity android:name=".kotlin.flow.flow_livedata.KotlinFlowAndLiveDataSecondActivity" />
         <activity android:name=".kotlin.flow.flow_livedata.KotlinFlowAndLiveDataActivity" />
         <activity android:name=".ui.viewSystem.choreographer.UIViewSystemChoreographerActivity" />
@@ -259,8 +259,8 @@
         <activity android:name=".ui.recyclerView.itemTouchHelper.RVItemTouchHelperMainActivity" />
         <activity android:name=".ui.recyclerView.itemTouchHelper.pointDrag.RVItemTouchHelperPointDragActivity" />
         <activity android:name=".ui.recyclerView.itemTouchHelper.childDrarw.RVItemTouchHelperChildDrawActivity" />
-        <activity android:name=".android.mediaPlayer.custom_mediaplayer.MediaPlayerCustomActivity" />
-        <activity android:name=".android.mediaPlayer.simple.MediaPlayerSimpleActivity" />
+        <activity android:name=".android.media.custom_mediaplayer.MediaPlayerCustomActivity" />
+        <activity android:name=".android.media.simple.MediaPlayerSimpleActivity" />
         <activity android:name=".ui.viewSystem.viewTreeObserver.UIWindowAttachActivity" />
         <activity android:name=".ui.viewSystem.viewTreeObserver.UIWindowFocusActivity" />
         <activity android:name=".ui.viewSystem.viewTreeObserver.UIGlobalFocusActivity" />
@@ -333,8 +333,8 @@
         <activity android:name=".performance.power.wakelock.WakelockAy" />
         <activity android:name=".android.bluetooth.AndroidBluetoothMainActivity" />
         <activity android:name=".android.bluetooth.BluetoothApiActivity" />
-        <activity android:name=".android.audio.AndroidAudioMainActivity" />
-        <activity android:name=".android.audio.AudioApiActivity" />
+        <activity android:name=".android.media.AudioApiActivity" />
+        <activity android:name=".android.media.MediaPlayerMusicActivity" />
 
         <provider
             android:name=".android.data_and_file._ContentProvider.MyContentProvider"

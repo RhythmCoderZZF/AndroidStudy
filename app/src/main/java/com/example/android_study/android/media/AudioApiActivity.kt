@@ -1,4 +1,4 @@
-package com.example.android_study.android.audio
+package com.example.android_study.android.media
 
 import android.content.Context
 import android.media.AudioFocusRequest
