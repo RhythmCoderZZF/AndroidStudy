@@ -335,6 +335,9 @@
         <activity android:name=".android.bluetooth.BluetoothApiActivity" />
         <activity android:name=".android.media.AudioApiActivity" />
         <activity android:name=".android.media.MediaPlayerMusicActivity" />
+        <activity android:name=".android.framework.power.AndroidPowerManagerMainActivity" />
+        <activity android:name=".android.framework.dream.AndroidDreamManagerMainActivity" />
+        <activity android:name=".performance.anr.PerformanceANRActivity" />
 
         <provider
             android:name=".android.data_and_file._ContentProvider.MyContentProvider"

@@ -56,6 +56,7 @@ import com.example.android_study.network.okhttp.OkHttpMainActivity;
 import com.example.android_study.other.adb.ADBActivity;
 import com.example.android_study.other.status_bar.common.StatusBarAy;
 import com.example.android_study.other.utils.UtilsActivity;
+import com.example.android_study.performance.anr.PerformanceANRActivity;
 import com.example.android_study.performance.crash.PerformanceCrashActivity;
 import com.example.android_study.performance.layout.PerformanceLayoutActivity;
 import com.example.android_study.performance.memory.PerformanceMemoryLeakAy;
@@ -500,7 +501,7 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // 优化
+    // performance 优化
     {
         NavigationListData data = new NavigationListData();
         data.setTitle("优化");
@@ -515,6 +516,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("异常崩溃");
             entry.setPath(PerformanceCrashActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("ANR");
+            entry.setPath(PerformanceANRActivity.class);
             entries.add(entry);
         }
         {
