@@ -3,14 +3,28 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data/anr下查看trace文件"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.主线程阻塞"/>
+
+    <Button
+        android:id="@+id/btn_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1.主线程阻塞,data/anr下查看trace文件"/>
+        android:text="1.主线程死锁"/>
 
     <Button
-        android:id="@+id/btn_block"
+        android:id="@+id/btn_block1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="start"/>

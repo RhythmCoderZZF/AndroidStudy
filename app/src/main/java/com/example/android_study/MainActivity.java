@@ -501,7 +501,7 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         navigationDataList.add(data);
     }
 
-    // performance 优化
+    // performance 性能优化
     {
         NavigationListData data = new NavigationListData();
         data.setTitle("优化");

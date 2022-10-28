@@ -1,15 +1,13 @@
 package com.example.android_study.performance.anr
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.widget.Toast
+import android.util.Log
 import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
-import com.example.android_study._base.cmd.CmdUtil
 import kotlinx.android.synthetic.main.activity_performance_anr.*
-import kotlinx.android.synthetic.main.activity_performance_crash.*
-import kotlin.concurrent.thread
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 /**
  * Author:create by RhythmCoder
@@ -17,11 +15,32 @@ import kotlin.concurrent.thread
  * Description:
  */
 class PerformanceANRActivity : BaseActivity() {
+    private val TAG = this.javaClass.simpleName
+    private val SLEEP_TIME = 10_000L
+
     override fun getLayoutId() = R.layout.activity_performance_anr
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
+        /* 1.线程阻塞 */
         btn_block.setOnClickListener {
-            Thread.sleep(20_000)
+            Log.d(TAG,"1.线程阻塞 ")
+            Thread.sleep(SLEEP_TIME)
+        }
+
+        /* 2.线程死锁 */
+        btn_block1.setOnClickListener {
+            launch {
+                delay(100)
+                Log.d(TAG,"2.线程死锁 ")
+                synchronized(this@PerformanceANRActivity) {
+
+                }
+            }
+            launch(IO) {
+                synchronized(this@PerformanceANRActivity) {
+                    Thread.sleep(SLEEP_TIME)
+                }
+            }
         }
     }
 }
