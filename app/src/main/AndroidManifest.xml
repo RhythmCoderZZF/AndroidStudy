@@ -68,7 +68,6 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".performance.POMemoryMainActivity" />
         <activity android:name=".android.location.AndroidLocationManagerMainActivity" />
         <activity android:name=".android.data_and_file.internal_and_outspace.AndroidDataAndFileIOSpaceActivity" />
         <activity android:name=".android.data_and_file.AndroidDataAndFileMainActivity" />
@@ -131,7 +130,6 @@
             android:name=".jetpack.navigation.bottom_navigation.BottomNavAy"
             android:label="@string/title_activity_bottom_nav_ay" />
         <activity android:name=".jetpack.navigation.NavigationTestActivity" />
-        <activity android:name=".kotlin.coroutine._1_BaseAy" />
         <activity android:name=".kotlin.coroutine.cancel.CoroutineCancelAy" />
         <activity android:name=".jetpack.paging3.PagingAy" />
         <activity android:name=".Java.Juc.join.JucJoinActivity" />
@@ -336,7 +334,6 @@
         <activity android:name=".android.media.AudioApiActivity" />
         <activity android:name=".android.media.MediaPlayerMusicActivity" />
         <activity android:name=".android.framework.power.AndroidPowerManagerMainActivity" />
-        <activity android:name=".android.framework.dream.AndroidDreamManagerMainActivity" />
         <activity android:name=".performance.anr.PerformanceANRActivity" />
 
         <provider
