@@ -6,14 +6,13 @@ import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.adapter.Entry
 import com.example.android_study._base.cmd.CmdUtil
 import com.example.android_study.ui.recyclerView.diffutil.UIRVDiffUtilMainActivity
-import com.example.android_study.ui.recyclerView.diffutil.UIRecyclerViewDiffUtilActivity
 import com.example.android_study.ui.recyclerView.gesture.UIRecyclerViewDragActivity
 import com.example.android_study.ui.recyclerView.itemDecoration.RVItemDecorationActivity
 import com.example.android_study.ui.recyclerView.itemTouchHelper.RVItemTouchHelperMainActivity
 import com.example.android_study.ui.recyclerView.layoutManager.RVLayoutManagerActivity
 import com.example.android_study.ui.recyclerView.positioin.RVPositionMainActivity
 import com.example.android_study.ui.recyclerView.section.UIRecyclerViewSectionActivity
-import kotlinx.android.synthetic.main.activity_u_i_recycler_view_main.*
+import kotlinx.android.synthetic.main.activity_rv.*
 
 class UIRecyclerViewMainActivity : BaseActivity() {
     private val list = listOf(
@@ -28,7 +27,7 @@ class UIRecyclerViewMainActivity : BaseActivity() {
     )
 
 
-    override fun getLayoutId() = R.layout.activity_u_i_recycler_view_main
+    override fun getLayoutId() = R.layout.activity_rv
 
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
