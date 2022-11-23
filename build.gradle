@@ -30,6 +30,14 @@ allprojects {
         maven { url'https://maven.aliyun.com/repository/central/' }
         maven { url "https://jitpack.io" }
     }
+
+    configurations.all {
+        resolutionStrategy {
+            force "androidx.recyclerview:recyclerview:1.2.0-alpha04"
+            force "androidx.activity:activity:1.2.4"
+            force "androidx.core:core:1.6.0"
+        }
+    }
 }
 
 task clean(type: Delete) {
