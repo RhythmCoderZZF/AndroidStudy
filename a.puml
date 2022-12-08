@@ -1,0 +1,27 @@
+@startuml
+hide footbox
+participant InputReader as IR
+participant EventHub as EH
+participant InputDevice as ID
+participant InputMapper as IM
+->IR++:loopOnce()
+IR->EH++:getEvent()
+EH->EH:scanDevicesLocked
+note right
+扫描device，将扫描成功的device封装成一个DEVICE_ADDED类型的RawEvent
+end note
+EH->EH:read(device->fd, readBuffer)
+note right:读取input_event信息并封装成RawEvent
+EH->IR--
+opt RawEvent is DEVICE_ADDED
+IR->IR:addDeviceLocked(rawEvent)
+note right
+根据不同的device type创建不同的InputMapper
+封装到mDevices保存
+end note
+else RawEvent is Normal
+IR->IR++:processEventsLocked(rawEvent)
+end
+IR->ID++:process()
+ID->IM--++:process()
+@enduml

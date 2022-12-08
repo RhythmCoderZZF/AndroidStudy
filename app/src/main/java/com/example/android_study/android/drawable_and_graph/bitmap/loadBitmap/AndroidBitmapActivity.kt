@@ -1,5 +1,7 @@
 package com.example.android_study.android.drawable_and_graph.bitmap.loadBitmap
 
+import android.app.Application
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -20,6 +22,12 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
     }
 
     override fun run() {
+        //加载bitmap的几种方式
+        Resources.getSystem()
+        var ios =classLoader.getResourceAsStream("res/drawable/pic.jpg")
+        val b = BitmapFactory.decodeStream(ios)
+        iv_load.setImageBitmap(b)
+
         //1.直接加载大图
         val bytes = assets.open("bigPic.png").readBytes()
         CmdUtil.v("资源bytes:${bytes.size / 1024 / 1024} M")
@@ -29,6 +37,7 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
         CmdUtil.v("原图 宽:${bitmap.width} 高:${bitmap.height} size:$size M")
 
 
+        //2.压缩后
         val bitmap1 = decodeBitmapFromBitmap(bytes, iv1.width, iv1.height)
         val size1 = bitmap1.allocationByteCount / 1024 / 1024f
         CmdUtil.i("压缩后 宽:${bitmap1.width} 高:${bitmap1.height} size:$size1 M")
@@ -57,7 +66,11 @@ class AndroidBitmapActivity : BaseActivity(), Runnable {
      * 计算要缩放的inSampleSize大小：
      * 1. 长和宽各缩放的大小（2的倍数）
      */
-    private fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
+    private fun calculateInSampleSize(
+        options: BitmapFactory.Options,
+        reqWidth: Int,
+        reqHeight: Int
+    ): Int {
         val (w, h) = options.run { outWidth to outHeight }//Pair(w;h)
         var inSampleSize = 1
         if (w > reqWidth || h > reqHeight) {

@@ -32,9 +32,6 @@ class CoroutinesAy : BaseActivity() {
 
     override fun initViewAndData(savedInstanceState: Bundle?) {
         setRecyclerView(rv, list)
-        lifecycleScope
     }
-
-
 }
 
