@@ -11,6 +11,7 @@ import com.example.android_study.android.media.douyin.jz_recyclerview.JzTikTokAc
 import com.example.android_study.android.media.douyin.jz_viewpager2.JzTikTokViewPager2Activity
 import com.example.android_study.android.media.custom_mediaplayer.MediaPlayerCustomActivity
 import com.example.android_study.android.media.douyin.ex_recyclerView.MediaPlayerRecyclerViewActivity
+import com.example.android_study.android.media.recorder.MediaRecorderActivity
 import com.example.android_study.android.media.simple.MediaPlayerSimpleActivity
 import kotlinx.android.synthetic.main.activity_media_player_main.*
 
@@ -41,6 +42,7 @@ class MediaPlayerMainActivity : BaseActivity() {
         setRecyclerView(
             rv, listOf(
                 Entry("1. Audio API", AudioApiActivity::class.java, "AudioManager相关"),
+                Entry("1. MediaRecorder API", MediaRecorderActivity::class.java, "MediaRecorder相关"),
                 Entry("1. VideoView播放", MediaPlayerSimpleActivity::class.java, "简单播放"),
                 Entry("2. MediaPlayer播放音频", MediaPlayerMusicActivity::class.java, "简单播放mp3"),
                 Entry("2. MediaPlayer播放视频", MediaPlayerCustomActivity::class.java, "简单播放"),

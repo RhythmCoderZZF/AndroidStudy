@@ -1,10 +1,10 @@
 package com.example.client
 
 import android.os.Bundle
-import com.example.client.android.content_provider.AndroidContentProviderMainActivity
 import com.example.client._base.BaseActivity
 import com.example.client._base.Entry
 import com.example.client.android.activity.AndroidActivity
+import com.example.client.android.content_provider.AndroidContentProviderMainActivity
 import com.example.client.android.ipc.AndroidIPCMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
