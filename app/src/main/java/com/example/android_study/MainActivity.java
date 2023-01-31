@@ -22,6 +22,7 @@ import com.example.android_study.android.activity.AndroidActivity;
 import com.example.android_study.android.bluetooth.AndroidBluetoothMainActivity;
 import com.example.android_study.android.database.MainDataBaseAy;
 import com.example.android_study.android.notification.NotificationMainActivity;
+import com.example.android_study.android.ui_system.AndroidUISystemMainActivity;
 import com.example.android_study.android.webview.AndroidWebViewMainActivity;
 import com.example.android_study.android.data_and_file.AndroidDataAndFileMainActivity;
 import com.example.android_study.android.drawable_and_graph.AndroidDrawableGraphMainActivity;
@@ -147,6 +148,12 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("图片与图形");
             entry.setPath(AndroidDrawableGraphMainActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("图形系统");
+            entry.setPath(AndroidUISystemMainActivity.class);
             entries.add(entry);
         }
         {
