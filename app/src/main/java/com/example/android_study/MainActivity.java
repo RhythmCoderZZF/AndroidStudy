@@ -22,7 +22,6 @@ import com.example.android_study.android.activity.AndroidActivity;
 import com.example.android_study.android.bluetooth.AndroidBluetoothMainActivity;
 import com.example.android_study.android.database.MainDataBaseAy;
 import com.example.android_study.android.notification.NotificationMainActivity;
-import com.example.android_study.android.ui_system.AndroidUISystemMainActivity;
 import com.example.android_study.android.webview.AndroidWebViewMainActivity;
 import com.example.android_study.android.data_and_file.AndroidDataAndFileMainActivity;
 import com.example.android_study.android.drawable_and_graph.AndroidDrawableGraphMainActivity;
@@ -68,7 +67,7 @@ import com.example.android_study.samples.photoTag.PhotoTagMainActivity;
 import com.example.android_study.ui.popup_window.PopupWindowAy;
 import com.example.android_study.ui.materialDesign.MaterialDesignMainActivity;
 import com.example.android_study.ui.recyclerView.UIRecyclerViewMainActivity;
-import com.example.android_study.ui.viewSystem.UIViewSystemActivity;
+import com.example.android_study.ui.viewSystem.UIMainActivity;
 import com.example.android_study.ui.viewpager2.UIViewPager2MainActivity;
 import com.example.android_study.ui_custom.anim.UICusAnimActivity;
 import com.example.android_study.ui_custom.calendar.CalendarAy;
@@ -152,12 +151,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
         }
         {
             NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("图形系统");
-            entry.setPath(AndroidUISystemMainActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("Handler");
             entry.setPath(HandlerMainActivity.class);
             entries.add(entry);
@@ -196,6 +189,54 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("蓝牙");
             entry.setPath(AndroidBluetoothMainActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 图形系统
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("Android图形系统");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("🚀Android图形系统");
+            entry.setPath(UIMainActivity.class);
+            entries.add(entry);
+        }
+        data.setContent(entries);
+        navigationDataList.add(data);
+    }
+
+    // 事件系统
+    {
+        NavigationListData data = new NavigationListData();
+        data.setTitle("Android事件系统");
+        List<NavigationListData.Entry> entries = new ArrayList<>();
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("🚀Android事件系统");
+            entry.setPath(UICusEventActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("事件处理工具类");
+            entry.setPath(UICusEventUtilActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("嵌套滑动");
+            entry.setPath(UICusEventNestActivity.class);
+            entries.add(entry);
+        }
+        {
+            NavigationListData.Entry entry = new NavigationListData.Entry();
+            entry.setContent("多点触控");
+            entry.setPath(EventMultiTouchMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);
@@ -318,54 +359,6 @@ public class MainActivity extends BaseActivity implements NavigationAdapter.TagC
             NavigationListData.Entry entry = new NavigationListData.Entry();
             entry.setContent("wanandroid demo");
             entry.setPath(WanandroidMainActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
-    // 图形系统
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("Android图形系统");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("🚀Android图形系统");
-            entry.setPath(UIViewSystemActivity.class);
-            entries.add(entry);
-        }
-        data.setContent(entries);
-        navigationDataList.add(data);
-    }
-
-    // 事件系统
-    {
-        NavigationListData data = new NavigationListData();
-        data.setTitle("Android事件系统");
-        List<NavigationListData.Entry> entries = new ArrayList<>();
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("🚀Android事件系统");
-            entry.setPath(UICusEventActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("事件处理工具类");
-            entry.setPath(UICusEventUtilActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("嵌套滑动");
-            entry.setPath(UICusEventNestActivity.class);
-            entries.add(entry);
-        }
-        {
-            NavigationListData.Entry entry = new NavigationListData.Entry();
-            entry.setContent("多点触控");
-            entry.setPath(EventMultiTouchMainActivity.class);
             entries.add(entry);
         }
         data.setContent(entries);

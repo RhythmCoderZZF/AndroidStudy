@@ -13,7 +13,6 @@ import com.example.android_study.R
 import com.example.android_study._base.BaseActivity
 import com.example.android_study._base.cmd.CmdUtil
 import kotlinx.android.synthetic.main.activity_u_i_view_system_view_post.*
-import kotlinx.android.synthetic.main.activity_u_i_view_system_windowmanager.*
 import kotlin.concurrent.thread
 
 class _UIViewSystemLayoutInflaterActivity : BaseActivity() {

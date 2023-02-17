@@ -86,7 +86,7 @@
         <activity android:name=".kotlin.flow.flow_livedata.KotlinFlowAndLiveDataSecondActivity" />
         <activity android:name=".kotlin.flow.flow_livedata.KotlinFlowAndLiveDataActivity" />
         <activity android:name=".ui.viewSystem.choreographer.UIViewSystemChoreographerActivity" />
-        <activity android:name=".ui.viewSystem.UIViewSystemActivity" />
+        <activity android:name=".ui.viewSystem.UIMainActivity" />
         <activity android:name=".kotlin.flow.switchThread.kotlinFlowSwitchThreadActivity" />
         <activity android:name=".android.handler.handlerThread.HandlerThreadActivity" />
         <activity android:name=".other.status_bar.immerse.StatusBarImmerseActivity" />
@@ -235,7 +235,7 @@
         <activity android:name=".event_system.event_util.Scroller.scroll_view.ScrollerActivity1" />
         <activity android:name=".event_system.event_util.Scroller.fling.ScrollerFlingActivity1" />
         <activity android:name=".event_system.event_util.UICusEventUtilActivity" />
-        <activity android:name=".ui.viewSystem.windowManager.UIViewSystemWindowManagerActivity" />
+        <activity android:name=".ui.viewSystem.window.UIViewSystemWindowManagerActivity" />
         <activity android:name=".android.ipc.IPCMainActivity" />
         <activity android:name=".android.ipc.binder.IPCAIDLActivity" />
         <activity android:name=".event_system.event.dispatchTouchEvent.BConsumeAllActivity" />
@@ -339,8 +339,7 @@
         <activity android:name=".android.media.MediaPlayerMusicActivity" />
         <activity android:name=".performance.anr.PerformanceANRActivity" />
         <activity android:name=".android.media.recorder.MediaRecorderActivity" />
-        <activity android:name=".android.ui_system.AndroidUISystemMainActivity" />
-        <activity android:name=".android.ui_system.window.UiSystemWindowActivity" />
+        <activity android:name=".ui.viewSystem.window.UiWindowActivity" />
 
         <provider
             android:name=".android.data_and_file._ContentProvider.MyContentProvider"

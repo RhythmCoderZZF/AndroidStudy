@@ -64,7 +64,7 @@ public class FloatViewService extends Service {
     public void onCreate() {
         super.onCreate();
         LogUtil.v(TAG, "onCreate");
-        showWindow();
+        initWindow();
     }
 
     @Override
@@ -78,15 +78,15 @@ public class FloatViewService extends Service {
         super.onDestroy();
         LogUtil.v(TAG, "onDestroy");
         //移除FloatingView
-        if (mWindowManager != null && mFloatingView != null) {
+        try {
             mWindowManager.removeView(mFloatingView);
-            mWindowManager = null;
-            mFloatingView = null;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
 
-    public void showWindow() {
+    public void initWindow() {
         //获取WindowManager对象
         mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         //设置WindowManger布局参数以及相关属性
@@ -101,15 +101,16 @@ public class FloatViewService extends Service {
         params.format = PixelFormat.RGBA_8888;   //窗口透明
         params.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
         //初始化位置
-        params.gravity = Gravity.TOP | Gravity.RIGHT;
+        params.gravity = Gravity.TOP | Gravity.LEFT;
+        params.x = 50;
+        params.y = 50;
         params.width = DensityUtil.dp2px(150);
         params.height = DensityUtil.dp2px(500);
+        params.setTitle("MyFloatView");
 
         mFloatingView = LayoutInflater.from(this).inflate(R.layout.layout_floating_view, null);
 
-
         initViewAndListener();
-        mWindowManager.addView(mFloatingView, params);
     }
 
     private void initViewAndListener() {
@@ -151,7 +152,7 @@ public class FloatViewService extends Service {
                         startTouchY = event.getRawY();
                         return true;
                     case MotionEvent.ACTION_MOVE:
-                        params.x = startX - (int) (event.getRawX() - startTouchX);
+                        params.x = startX + (int) (event.getRawX() - startTouchX);
                         params.y = startY + (int) (event.getRawY() - startTouchY);
                         //更新View的位置
                         mWindowManager.updateViewLayout(mFloatingView, params);
@@ -207,28 +208,22 @@ public class FloatViewService extends Service {
          * 开启 cmd
          */
         public void showWindow() {
-            if (mFloatingView != null && mFloatingView.getVisibility() != View.VISIBLE) {
-                mFloatingView.post(() -> {
-                    mFloatingView.setVisibility(View.VISIBLE);
-                });
-                return;
+            try {
+                mWindowManager.addView(mFloatingView, params);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            if (mFloatingView == null)
-                FloatViewService.this.showWindow();
-
         }
 
         /**
          * 隐藏 cmd
          */
         public void dismissWindow() {
-            if (mFloatingView != null && mFloatingView.getVisibility() == View.VISIBLE) {
-                mFloatingView.post(() -> {
-                    mFloatingView.setVisibility(View.GONE);
-                });
+            try {
+                mWindowManager.removeView(mFloatingView);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
-
-
 }
